@@ -13,11 +13,11 @@ pipelines:
   - name: runtime
     setup:  
       runtime:       
-        type: host
-        image:
-          auto:
-            language: nodejs
-            versions: 10.15.3
+        type: image
+#         image:
+#           auto:
+#             language: 
+#             versions: 
 #           custom:
 #             name:
 #             tag:
@@ -41,13 +41,13 @@ pipelines:
 
       - name: test2
         type: bash   
-        setup:
-          runtime:
-            type: image
-            image:
-             custom:
-               name: drydock/u16node
-               tag: master
+#         setup:
+#           runtime:
+#             type: image
+#             image:
+#              custom:
+#                name: 
+#                tag: master
         triggeredBy:
           steps:
             - test1
