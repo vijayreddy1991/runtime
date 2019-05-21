@@ -1,0 +1,88 @@
+resources:
+  - name: test
+    type: gitRepo
+    repoPath: vijayreddy1991/sample_pip
+    configuration:
+      integrationName: github
+      branches:
+        only: master
+    initialVersion:
+      sha: master
+  
+pipelines:
+  - name: runtime
+    setup:  
+      runtime:       
+        type: 
+        image:
+          auto:
+            language:
+            versions:
+          custom:
+            name:
+            tag:
+            options:
+    steps:    
+      - name: test1
+        type: bash 
+        setup:
+          runtime:
+            type: image
+            image:
+             custom:
+               name: drydock/u16all
+               tag: master
+        triggeredBy:
+          resources:
+            - test
+        execution:
+          onExecute:
+            - echo "hi"
+
+      - name: test2
+        type: bash   
+        setup:
+          runtime:
+            type: image
+            image:
+             custom:
+               name: drydock/u16all
+               tag: master
+        triggeredBy:
+          steps:
+            - test1
+        execution:
+          onExecute:
+            - echo "test2"
+
+      - name: test3
+        type: bash  
+        setup:
+          runtime:
+            type: image
+            image:
+             custom:
+               name: drydock/u16all
+               tag: master
+        triggeredBy:
+          steps:
+            - test2
+        execution:
+          onExecute:
+            - echo "Test3"
+
+      - name: test4
+        type: bash   
+        setup:
+          runtime:
+            type: image
+            image:
+             custom:
+               name: drydock/u16all
+               tag: master
+        triggeredBy:
+          steps:
+            - test3
+        execution:
+          onExecute:
+            - echo "test4"
