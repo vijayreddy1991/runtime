@@ -27,7 +27,11 @@ pipelines:
 #             options:
     steps:    
       - name: test1
-        type: bash 
+        type: bash
+        setup: 
+          environmentVariables:
+            normal:
+              Number: 27 
 #         setup:
 #           runtime:
 #             type: image
