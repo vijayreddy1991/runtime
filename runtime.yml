@@ -46,7 +46,7 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"
-            - nvm list
+#             - nvm list
 
       - name: test2
         type: bash   
@@ -63,7 +63,7 @@ pipelines:
         execution:
           onExecute:
             - echo "test2"
-            - nvm list
+#             - nvm list
 
       - name: test3
         type: bash  
@@ -80,7 +80,7 @@ pipelines:
         execution:
           onExecute:
             - echo "Test3"
-            - nvm list
+#             - nvm list
 
       - name: test4
         type: bash   
@@ -97,4 +97,4 @@ pipelines:
         execution:
           onExecute:
             - echo "test4"
-            - nvm list
+#             - nvm list
