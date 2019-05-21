@@ -23,8 +23,8 @@ pipelines:
 #             versions:
 #               - 10.15.3
           custom:
-            name: drydock/c7node
-            tag: master
+            name: "drydock/c7node"
+            tag: "master"
             options: ""
     steps:    
       - name: test1
