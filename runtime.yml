@@ -14,10 +14,10 @@ pipelines:
     setup:  
       runtime:       
         type: host
-#         image:
-#           auto:
-#             language:
-#             versions:
+        image:
+          auto:
+            language: nodejs
+            versions: 10.15.3
 #           custom:
 #             name:
 #             tag:
