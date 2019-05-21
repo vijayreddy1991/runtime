@@ -17,7 +17,7 @@ pipelines:
           Number: 27   
       runtime:       
         type: image
-#         image:
+        image:
 #           auto:
 #             language: nodejs
 #             versions:
