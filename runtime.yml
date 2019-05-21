@@ -11,7 +11,10 @@ resources:
   
 pipelines:
   - name: runtime
-    setup:  
+    setup: 
+      environmentVariables:
+        normal:
+          Number: 27   
       runtime:       
         type: image
         image:
