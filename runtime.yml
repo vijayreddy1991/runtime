@@ -14,10 +14,10 @@ pipelines:
     setup:  
       runtime:       
         type: image
-#         image:
-#           auto:
-#             language: 
-#             versions: 
+        image:
+          auto:
+            language: nodejs
+            versions: 10.15.3
 #           custom:
 #             name:
 #             tag:
@@ -38,6 +38,7 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"
+            - node --version
 
       - name: test2
         type: bash   
@@ -54,6 +55,7 @@ pipelines:
         execution:
           onExecute:
             - echo "test2"
+            - node --version
 
       - name: test3
         type: bash  
@@ -70,6 +72,7 @@ pipelines:
         execution:
           onExecute:
             - echo "Test3"
+            - node --version
 
       - name: test4
         type: bash   
@@ -86,3 +89,4 @@ pipelines:
         execution:
           onExecute:
             - echo "test4"
+            - node --version
