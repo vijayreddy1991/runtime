@@ -17,15 +17,15 @@ pipelines:
           Number: 27   
       runtime:       
         type: image
-        image:
-          auto:
-            language: nodejs
-            versions:
-              - 10.15.3
-#           custom:
-#             name:
-#             tag:
-#             options:
+#         image:
+#           auto:
+#             language: nodejs
+#             versions:
+#               - 10.15.3
+          custom:
+            name:drydock/c7node
+            tag:master
+            options: ""
     steps:    
       - name: test1
         type: bash
