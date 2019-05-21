@@ -25,13 +25,13 @@ pipelines:
     steps:    
       - name: test1
         type: bash 
-        setup:
-          runtime:
-            type: image
-            image:
-             custom:
-               name: drydock/u16all
-               tag: master
+#         setup:
+#           runtime:
+#             type: image
+#             image:
+#              custom:
+#                name: drydock/u16node
+#                tag: master
         triggeredBy:
           resources:
             - test
@@ -41,13 +41,13 @@ pipelines:
 
       - name: test2
         type: bash   
-        setup:
-          runtime:
-            type: image
-            image:
-             custom:
-               name: drydock/u16all
-               tag: master
+#         setup:
+#           runtime:
+#             type: image
+#             image:
+#              custom:
+#                name: drydock/u16node
+#                tag: master
         triggeredBy:
           steps:
             - test1
@@ -57,13 +57,13 @@ pipelines:
 
       - name: test3
         type: bash  
-        setup:
-          runtime:
-            type: image
-            image:
-             custom:
-               name: drydock/u16all
-               tag: master
+#         setup:
+#           runtime:
+#             type: image
+#             image:
+#              custom:
+#                name: drydock/u16node
+#                tag: master
         triggeredBy:
           steps:
             - test2
@@ -73,13 +73,13 @@ pipelines:
 
       - name: test4
         type: bash   
-        setup:
-          runtime:
-            type: image
-            image:
-             custom:
-               name: drydock/u16all
-               tag: master
+#         setup:
+#           runtime:
+#             type: image
+#             image:
+#              custom:
+#                name: drydock/u16node
+#                tag: master
         triggeredBy:
           steps:
             - test3
