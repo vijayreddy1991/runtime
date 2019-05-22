@@ -1,13 +1,13 @@
-# resources:
-#   - name: test
-#     type: gitRepo
-#     repoPath: vijayreddy1991/sample_pip
-#     configuration:
-#       integrationName: vijay_github
-#       branches:
-#         only: master
-#     initialVersion:
-#       sha: master
+resources:
+  - name: test
+    type: gitRepo
+    repoPath: vijayreddy1991/sample_pip
+    configuration:
+      integrationName: vijay_github
+      branches:
+        only: master
+    initialVersion:
+      sha: master
 
 pipelines:
   - name: runtime
@@ -36,27 +36,17 @@ pipelines:
              custom:
                name: drydock/u16node
                tag: master
- #       triggeredBy:
-#           resources:
-#             - test
-          #steps:
-          #  - test3
+       triggeredBy:
+          resources:
+            - test
         execution:
           onExecute:
             - echo "hi"
             - printenv
-            #- nvm list
             - add_run_variable FOO_STATE=BAR_VAL
 
       - name: test2
         type: bash   
-#         setup:
-#           runtime:
-#             type: image
-#             image:
-#              custom:
-#                name: 
-#                tag: master
         triggeredBy:
           steps:
             - test1
@@ -67,29 +57,17 @@ pipelines:
 
       - name: test3
         type: bash  
-#         setup:
-#           runtime:
-#             type: image
-#             image:
-#              custom:
-#                name: drydock/u16node
-#                tag: master
         triggeredBy:
           steps:
             - test2
         execution:
           onExecute:
             - echo "Test3"
+            - echo $FOO_STATE
 
-#       - name: test4
-#         type: bash   
-#         setup:
-#           runtime:
-#             type: image
-#             image:
-#              custom:
-#                name: drydock/u16node
-#                tag: master
-#         execution:
-#           onExecute:
-#             - echo "test4"
+      - name: test4
+        type: bash   
+        execution:
+          onExecute:
+            - echo "test4"
+            - echo $FOO_STATE
