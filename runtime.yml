@@ -9,37 +9,37 @@ resources:
     initialVersion:
       sha: master
   
-pipelines:
-  - name: runs
-    setup: 
-      environmentVariables:
-        readOnly:
-          Number1: 27   
-      runtime:       
-        type: 
-        image:
-          auto:
-            language: nodejs
-            versions:
-              - 10.15.3
-#           custom:
-#             name: "drydock/u16node"
-#             tag: "master"
-#             options: "--env VIJAY=kumar"
-    steps:    
-      - name: testing
-        type: bash
-        setup: 
-          environmentVariables:
-            normal:
-              rd: 27 
-#         setup:
-#           runtime:
-#             type: image
-#             image:
-#              custom:
-#                name: drydock/u16node
-#                tag: master
+# pipelines:
+#   - name: runs
+#     setup: 
+#       environmentVariables:
+#         readOnly:
+#           Number1: 27   
+#       runtime:       
+#         type: 
+#         image:
+#           auto:
+#             language: nodejs
+#             versions:
+#               - 10.15.3
+# #           custom:
+# #             name: "drydock/u16node"
+# #             tag: "master"
+# #             options: "--env VIJAY=kumar"
+#     steps:    
+#       - name: testing
+#         type: bash
+#         setup: 
+#           environmentVariables:
+#             normal:
+#               rd: 27 
+# #         setup:
+# #           runtime:
+# #             type: image
+# #             image:
+# #              custom:
+# #                name: drydock/u16node
+# #                tag: master
         triggeredBy:
           resources:
             - test
