@@ -18,14 +18,14 @@ pipelines:
       runtime:       
         type: image
         image:
-#           auto:
-#             language: nodejs
-#             versions:
-#               - 10.15.3
-          custom:
-            name: "drydock/u16node"
-            tag: "master"
-            options: "--env VIJAY=kumar"
+          auto:
+            language: nodejs
+            versions:
+              - 10.15.3
+#           custom:
+#             name: "drydock/u16node"
+#             tag: "master"
+#             options: "--env VIJAY=kumar"
     steps:    
       - name: test1
         type: bash
@@ -60,12 +60,10 @@ pipelines:
 #                tag: master
         triggeredBy:
           steps:
-            - test3
+            - test1
         execution:
           onExecute:
             - echo "test2"
-            - printenv
-#             - nvm list
 
       - name: test3
         type: bash  
@@ -82,8 +80,6 @@ pipelines:
         execution:
           onExecute:
             - echo "Test3"
-            - printenv
-#             - nvm list
 
       - name: test4
         type: bash   
@@ -100,5 +96,3 @@ pipelines:
         execution:
           onExecute:
             - echo "test4"
-            - printenv
-#             - nvm list
