@@ -60,7 +60,7 @@ pipelines:
 #                tag: master
         triggeredBy:
           steps:
-            - test1
+            - test3
         execution:
           onExecute:
             - echo "test2"
