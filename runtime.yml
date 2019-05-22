@@ -43,7 +43,7 @@ pipelines:
         triggeredBy:
           resources:
             - test
-          step:
+          steps:
             - test3
         execution:
           onExecute:
