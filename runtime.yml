@@ -10,13 +10,52 @@ resources:
       sha: master
   
 pipelines:
+  - name: runs
+    setup: 
+      environmentVariables:
+        readOnly:
+          Number: 27   
+      runtime:       
+        type: 
+        image:
+          auto:
+            language: nodejs
+            versions:
+              - 10.15.3
+#           custom:
+#             name: "drydock/u16node"
+#             tag: "master"
+#             options: "--env VIJAY=kumar"
+    steps:    
+      - name: testing
+        type: bash
+        setup: 
+          environmentVariables:
+            normal:
+              d: 27 
+#         setup:
+#           runtime:
+#             type: image
+#             image:
+#              custom:
+#                name: drydock/u16node
+#                tag: master
+        triggeredBy:
+          resources:
+            - test
+        execution:
+          onExecute:
+            - echo "hi"
+            - printenv
+#             - nvm list
+pipelines:
   - name: runtime
     setup: 
       environmentVariables:
         readOnly:
           Number: 27   
       runtime:       
-        type: host
+        type: 
         image:
           auto:
             language: nodejs
@@ -42,7 +81,7 @@ pipelines:
 #                tag: master
         triggeredBy:
           resources:
-            - runtime
+            - test
         execution:
           onExecute:
             - echo "hi"
@@ -60,7 +99,7 @@ pipelines:
 #                tag: master
         triggeredBy:
           steps:
-            - test1
+            - testing
         execution:
           onExecute:
             - echo "test2"
