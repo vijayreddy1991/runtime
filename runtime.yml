@@ -25,7 +25,7 @@ pipelines:
           custom:
             name: "drydock/u16node"
             tag: "master"
-            options: "-w /user/bin"
+            options: "--env VIJAY=kumar"
     steps:    
       - name: test1
         type: bash
@@ -46,7 +46,7 @@ pipelines:
         execution:
           onExecute:
             - echo "hi"
-            - pwd
+            - printenv
 #             - nvm list
 
       - name: test2
@@ -64,7 +64,7 @@ pipelines:
         execution:
           onExecute:
             - echo "test2"
-            - pwd
+            - printenv
 #             - nvm list
 
       - name: test3
@@ -82,7 +82,7 @@ pipelines:
         execution:
           onExecute:
             - echo "Test3"
-            - pwd
+            - printenv
 #             - nvm list
 
       - name: test4
@@ -100,5 +100,5 @@ pipelines:
         execution:
           onExecute:
             - echo "test4"
-            - pwd
+            - printenv
 #             - nvm list
