@@ -36,9 +36,9 @@ pipelines:
              custom:
                name: drydock/u16node
                tag: master
-       triggeredBy:
-          resources:
-            - test
+        triggeredBy:
+           resources:
+             - test
         execution:
           onExecute:
             - echo "hi"
