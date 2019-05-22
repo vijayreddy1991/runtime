@@ -3,7 +3,7 @@ resources:
     type: gitRepo
     repoPath: vijayreddy1991/sample_pip
     configuration:
-      integrationName: github
+      integrationName: vijay_github
       branches:
         only: master
     initialVersion:
