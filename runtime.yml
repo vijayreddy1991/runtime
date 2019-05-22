@@ -41,7 +41,7 @@ pipelines:
              - test
         execution:
           onExecute:
-            - echo "hi" > file.txt
+            - sudo dd if=/dev/urandom of=file.txt count=1000000 bs=1100
             - printenv
             - save_run_state $(pwd)/file.txt impfile
 
@@ -64,7 +64,7 @@ pipelines:
           onExecute:
             - echo "Test3"
             - restore_run_state impfile exmple.txt
-            - cat exmple.txt
+            - du -h
 
       - name: test4
         type: bash 
@@ -74,5 +74,5 @@ pipelines:
         execution:
           onExecute:
             - echo "test4"
-            - restore_run_state file exmple.txt
-            - cat exmple.txt
+            - restore_run_state impfile exmple.txt
+            - du -h
