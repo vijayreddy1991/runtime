@@ -45,7 +45,7 @@ pipelines:
           onExecute:
             - echo "hi"
             - printenv
-            - nvm list
+            #- nvm list
             - add_run_variable FOO_STATE=BAR_VAL
 
       - name: test2
