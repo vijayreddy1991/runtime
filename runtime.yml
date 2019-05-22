@@ -1,13 +1,13 @@
-resources:
-  - name: test
-    type: gitRepo
-    repoPath: vijayreddy1991/sample_pip
-    configuration:
-      integrationName: vijay_github
-      branches:
-        only: master
-    initialVersion:
-      sha: master
+# resources:
+#   - name: test
+#     type: gitRepo
+#     repoPath: vijayreddy1991/sample_pip
+#     configuration:
+#       integrationName: vijay_github
+#       branches:
+#         only: master
+#     initialVersion:
+#       sha: master
 
 pipelines:
   - name: runtime
@@ -27,12 +27,12 @@ pipelines:
 #             tag: "master"
 #             options: "--env VIJAY=kumar"
     steps:    
-      - name: test1
-        type: bash
-        setup: 
-          environmentVariables:
-            normal:
-              d: 27 
+#       - name: test1
+#         type: bash
+#         setup: 
+#           environmentVariables:
+#             normal:
+#               d: 27 
 #         setup:
 #           runtime:
 #             type: image
@@ -40,13 +40,13 @@ pipelines:
 #              custom:
 #                name: drydock/u16node
 #                tag: master
-        triggeredBy:
-          resources:
-            - test
-        execution:
-          onExecute:
-            - echo "hi"
-            - printenv
+#         triggeredBy:
+#           resources:
+#             - test
+#         execution:
+#           onExecute:
+#             - echo "hi"
+#             - printenv
 #             - nvm list
 
       - name: test2
@@ -81,8 +81,8 @@ pipelines:
           onExecute:
             - echo "Test3"
 
-      - name: test4
-        type: bash   
+#       - name: test4
+#         type: bash   
 #         setup:
 #           runtime:
 #             type: image
@@ -90,9 +90,9 @@ pipelines:
 #              custom:
 #                name: drydock/u16node
 #                tag: master
-        triggeredBy:
-          steps:
-            - test3
-        execution:
-          onExecute:
-            - echo "test4"
+#         triggeredBy:
+#           steps:
+#             - test3
+#         execution:
+#           onExecute:
+#             - echo "test4"
