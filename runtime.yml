@@ -41,9 +41,9 @@ pipelines:
              - test
         execution:
           onExecute:
-            - echo "hi"
+            - echo "hi" > file.txt
             - printenv
-            - add_run_variable FOO_STATE=BAR_VAL
+            - save_run_state $(pwd)/file.txt impfile
 
       - name: test2
         type: bash   
@@ -53,7 +53,7 @@ pipelines:
         execution:
           onExecute:
             - echo "test2"
-            - add_run_variable FOO_STATE=vijay
+            
 
       - name: test3
         type: bash  
@@ -63,7 +63,8 @@ pipelines:
         execution:
           onExecute:
             - echo "Test3"
-            - echo $FOO_STATE
+            - restore_run_state impfile exmple.txt
+            - cat exmple.txt
 
       - name: test4
         type: bash 
@@ -73,4 +74,4 @@ pipelines:
         execution:
           onExecute:
             - echo "test4"
-            - echo $FOO_STATE
+            - cat exmple.txt
