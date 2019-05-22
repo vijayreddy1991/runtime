@@ -25,7 +25,7 @@ pipelines:
           custom:
             name: "drydock/u19node"
             tag: "master"
-            options: ""
+            options: "--name vijay"
     steps:    
       - name: test1
         type: bash
