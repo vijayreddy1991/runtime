@@ -42,7 +42,7 @@ pipelines:
 #                tag: master
         triggeredBy:
           resources:
-            - test
+            - runtime
         execution:
           onExecute:
             - echo "hi"
