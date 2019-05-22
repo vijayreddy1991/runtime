@@ -1,13 +1,13 @@
-resources:
-  - name: test
-    type: gitRepo
-    repoPath: vijayreddy1991/sample_pip
-    configuration:
-      integrationName: vijay_github
-      branches:
-        only: master
-    initialVersion:
-      sha: master
+# resources:
+#   - name: test
+#     type: gitRepo
+#     repoPath: vijayreddy1991/sample_pip
+#     configuration:
+#       integrationName: vijay_github
+#       branches:
+#         only: master
+#     initialVersion:
+#       sha: master
 
 pipelines:
   - name: runtime
@@ -41,8 +41,8 @@ pipelines:
                name: drydock/u16node
                tag: master
         triggeredBy:
-          resources:
-            - test
+#           resources:
+#             - test
           steps:
             - test3
         execution:
