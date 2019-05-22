@@ -39,13 +39,14 @@ pipelines:
         triggeredBy:
 #           resources:
 #             - test
-          steps:
-            - test3
+          #steps:
+          #  - test3
         execution:
           onExecute:
             - echo "hi"
             - printenv
             - nvm list
+            - add_run_variable FOO_STATE=BAR_VAL
 
       - name: test2
         type: bash   
@@ -62,6 +63,7 @@ pipelines:
         execution:
           onExecute:
             - echo "test2"
+            - echo $FOO_STATE
 
       - name: test3
         type: bash  
