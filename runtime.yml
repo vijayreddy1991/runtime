@@ -63,7 +63,7 @@ pipelines:
         execution:
           onExecute:
             - echo "Test3"
-            - restore_run_state impfile exmple.txt
+            - restore_run_state file exmple.txt
             - cat exmple.txt
 
       - name: test4
