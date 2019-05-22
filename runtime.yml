@@ -16,7 +16,7 @@ pipelines:
         readOnly:
           Number: 27   
       runtime:       
-        type: image
+        type: host
         image:
           auto:
             language: nodejs
