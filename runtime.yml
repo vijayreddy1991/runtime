@@ -1,13 +1,13 @@
-# resources:
-#   - name: test
-#     type: gitRepo
-#     repoPath: vijayreddy1991/sample_pip
-#     configuration:
-#       integrationName: vijay_github
-#       branches:
-#         only: master
-#     initialVersion:
-#       sha: master
+resources:
+  - name: test
+    type: gitRepo
+    repoPath: vijayreddy1991/sample_pip
+    configuration:
+      integrationName: vijay_github
+      branches:
+        only: master
+    initialVersion:
+      sha: master
 
 pipelines:
   - name: runtime
@@ -27,27 +27,29 @@ pipelines:
 #             tag: "master"
 #             options: "--env VIJAY=kumar"
     steps:    
-#       - name: test1
-#         type: bash
-#         setup: 
-#           environmentVariables:
-#             normal:
-#               d: 27 
-#         setup:
-#           runtime:
-#             type: image
-#             image:
-#              custom:
-#                name: drydock/u16node
-#                tag: master
-#         triggeredBy:
-#           resources:
-#             - test
-#         execution:
-#           onExecute:
-#             - echo "hi"
-#             - printenv
-#             - nvm list
+      - name: test1
+        type: bash
+        setup: 
+          environmentVariables:
+            normal:
+              d: 27 
+        setup:
+          runtime:
+            type: image
+            image:
+             custom:
+               name: drydock/u16node
+               tag: master
+        triggeredBy:
+          resources:
+            - test
+          step:
+            - test3
+        execution:
+          onExecute:
+            - echo "hi"
+            - printenv
+            - nvm list
 
       - name: test2
         type: bash   
@@ -60,7 +62,7 @@ pipelines:
 #                tag: master
         triggeredBy:
           steps:
-            - test3
+            - test1
         execution:
           onExecute:
             - echo "test2"
