@@ -16,16 +16,16 @@ pipelines:
         readOnly:
           Number: 27   
       runtime:       
-        type: host
+        type: image
         image:
           auto:
             language: nodejs
             versions:
               - 10.15.3
-#           custom:
-#             name: "drydock/u16node"
-#             tag: "master"
-#             options: "--env VIJAY=kumar"
+          custom:
+            name: "drydock/u16node"
+            tag: "master"
+            options: "--env VIJAY=kumar"
     steps:    
       - name: test1
         type: bash
