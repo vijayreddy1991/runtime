@@ -69,6 +69,7 @@ pipelines:
 #             - sudo dd if=/dev/urandom of=file.txt count=1000000 bs=1100
             - printenv
             - node --version
+            - write_output webhookIntegrationResource1 step_id=$STEP_ID
 #             - save_run_state $(pwd)/file.txt impfile
 
 #       - name: test2
