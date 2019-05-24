@@ -8,8 +8,30 @@ resources:
         only: master
     initialVersion:
       sha: master
+  - name: webhookIntegrationResource1
+    type: webhook
+    configuration:
+      integrationName: externalWebhook
+    initialVersion:
+      payload: vijay      
+  - name: webhookIntegrationResource2
+    type: webhook
+    configuration:
+      integrationName: incomingWebhookIntegration
+    initialVersion:
+      payload: "" 
 
 pipelines:
+  - name: runtime2
+    steps:
+      - name: test2
+        type: bash
+        triggeredBy:
+          resources:
+            - webhookIntegrationResource2
+        execution:
+          onExecute:
+            - echo yay
   - name: runtime
     setup: 
       environmentVariables:
@@ -36,9 +58,11 @@ pipelines:
 #              custom:
 #                name: drydock/u18node
 #                tag: master
-        triggeredBy:
-           resources:
-             - test
+        #triggeredBy:
+        #   resources:
+        #     - test
+        outputResource:
+          - webhookIntegrationResource1
         execution:
           onExecute:
             - echo "vijay"
