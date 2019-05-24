@@ -19,7 +19,7 @@ resources:
     configuration:
       integrationName: incomingWebhookIntegration
     initialVersion:
-      payload: "dengu" 
+      payload: kumar
 
 pipelines:
   - name: runtime2
