@@ -29,13 +29,13 @@ pipelines:
     steps:    
       - name: test1
         type: bash
-        setup:
-          runtime:
-            type: image
-            image:
-             custom:
-               name: drydock/u18node
-               tag: master
+#         setup:
+#           runtime:
+#             type: image
+#             image:
+#              custom:
+#                name: drydock/u18node
+#                tag: master
         triggeredBy:
            resources:
              - test
