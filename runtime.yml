@@ -23,7 +23,7 @@ pipelines:
             versions:
               - 10.15.3
           custom:
-            name: "drydock/u16node"
+            name: "drydock/u18node"
             tag: "master"
             options: "--env VIJAY=kumar"
     steps:    
