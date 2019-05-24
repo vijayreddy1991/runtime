@@ -16,7 +16,7 @@ pipelines:
         readOnly:
           Number: 27   
       runtime:       
-        type: 
+        type: host
         image:
           auto:
             language: nodejs
@@ -29,13 +29,13 @@ pipelines:
     steps:    
       - name: test1
         type: bash
-#         setup:
-#           runtime:
-#             type: image
-#             image:
-#              custom:
-#                name: drydock/u16node
-#                tag: master
+        setup:
+          runtime:
+            type: image
+            image:
+             custom:
+               name: drydock/u16node
+               tag: master
         triggeredBy:
            resources:
              - test
