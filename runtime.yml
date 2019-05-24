@@ -34,7 +34,7 @@ pipelines:
             type: image
             image:
              custom:
-               name: drydock/u16node
+               name: drydock/u18node
                tag: master
         triggeredBy:
            resources:
@@ -43,7 +43,7 @@ pipelines:
           onExecute:
             - echo "vijay"
 #             - sudo dd if=/dev/urandom of=file.txt count=1000000 bs=1100
-#             - printenv
+            - printenv
 #             - save_run_state $(pwd)/file.txt impfile
 
 #       - name: test2
