@@ -10,7 +10,7 @@ resources:
       sha: master
 
 pipelines:
-  - name: runtime@123
+  - name: runtime
     setup: 
       environmentVariables:
         readOnly:
