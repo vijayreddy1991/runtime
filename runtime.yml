@@ -1,7 +1,7 @@
 resources:
   - name: test
     type: gitRepo
-    repoPath: vijayreddy1991/sample_pip
+    repoPath: vijayreddy1991/runtime
     configuration:
       integrationName: vijay_github
       branches:
