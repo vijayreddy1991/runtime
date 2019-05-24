@@ -61,7 +61,7 @@ pipelines:
         #triggeredBy:
         #   resources:
         #     - test
-        outputResource:
+        outputResources:
           - webhookIntegrationResource1
         execution:
           onExecute:
