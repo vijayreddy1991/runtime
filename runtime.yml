@@ -3,7 +3,7 @@ resources:
     type: gitRepo
     repoPath: vijayreddy1991/runtime
     configuration:
-      integrationName: vijay_github
+      integrationName: vijay_git
       branches:
         only: master
     initialVersion:
