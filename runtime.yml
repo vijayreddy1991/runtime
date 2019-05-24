@@ -29,7 +29,7 @@ pipelines:
     steps:    
       - name: test1
         type: bash
-        setup:
+#         setup:
 #           runtime:
 #             type: image
 #             image:
