@@ -32,22 +32,22 @@ pipelines:
         execution:
           onExecute:
             - echo yay
-#   - name: runtime
-#     setup: 
-#       environmentVariables:
-#         readOnly:
-#           Number: 27   
-#       runtime:       
-#         type: image
-#         image:
-# #           auto:
-# #             language: nodejs
-# #             versions:
-# #               - 10.15.3
-#           custom:
-#             name: "drydock/u18node"
-#             tag: "master"
-#             options: "--env VIJAY=kumar"
+  - name: runtime
+    setup: 
+      environmentVariables:
+        readOnly:
+          Number: 27   
+      runtime:       
+        type: image
+        image:
+#           auto:
+#             language: nodejs
+#             versions:
+#               - 10.15.3
+          custom:
+            name: "drydock/u18node"
+            tag: "master"
+            options: "--env VIJAY=kumar"
     steps:    
       - name: test1
         type: bash
