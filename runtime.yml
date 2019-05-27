@@ -34,7 +34,7 @@ pipelines:
     setup: 
       environmentVariables:
         readOnly:
-          Number: 27   
+          Number: 27
       runtime:       
         type: image
         image:
@@ -46,6 +46,9 @@ pipelines:
             name: "drydock/u18node"
             tag: "master"
             options: "--env VIJAY=kumar"
+        requires:
+          resources:
+             - webhookIntegrationResource2   
     steps:    
       - name: test1
         type: bash
