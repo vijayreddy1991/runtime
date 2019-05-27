@@ -26,7 +26,7 @@ pipelines:
     steps:
       - name: test2
         type: bash
-        triggeredBy:
+        requires:
           resources:
             - webhookIntegrationResource1
         execution:
