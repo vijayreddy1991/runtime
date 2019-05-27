@@ -28,7 +28,7 @@ pipelines:
         type: bash
         triggeredBy:
           resources:
-            - webhookIntegrationResource2
+            - webhookIntegrationResource1
         execution:
           onExecute:
             - echo yay
