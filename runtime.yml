@@ -19,7 +19,7 @@ resources:
     configuration:
       integrationName: incomingWebhookIntegration
     initialVersion:
-      payload: "reddy1"
+      payload: "reddy"
 
 pipelines:
   - name: runtime2
