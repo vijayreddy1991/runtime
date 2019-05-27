@@ -13,13 +13,13 @@ resources:
     configuration:
       integrationName: externalWebhook
     initialVersion:
-      payload: vijay      
+      payload: ""      
   - name: webhookIntegrationResource2
     type: webhook
     configuration:
       integrationName: incomingWebhookIntegration
     initialVersion:
-      payload: kumar1
+      payload: ""
 
 pipelines:
   - name: runtime2
