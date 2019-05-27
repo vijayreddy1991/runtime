@@ -26,9 +26,6 @@ pipelines:
     steps:
       - name: test2
         type: bash
-        requires:
-          resources:
-            - webhookIntegrationResource1
         execution:
           onExecute:
             - echo yay
