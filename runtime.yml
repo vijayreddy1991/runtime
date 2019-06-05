@@ -8,29 +8,21 @@ resources:
         only: master
     initialVersion:
       sha: master
-  - name: webhookIntegrationResource1
+  - name: webhookIncoming
     type: webhook
     configuration:
-      integrationName: externalWebhook
-    initialVersion:
-      payload: "vijay"      
-  - name: webhookIntegrationResource2
-    type: webhook
-    configuration:
-      integrationName: incomingWebhookIntegration
+      integrationName: vijay_internal
     initialVersion:
       payload: "reddy"
 
-pipelines:
-  - name: runtime2
-    steps:
-      - name: test2
-        type: bash
-        execution:
-          onExecute:
-            - echo yay
-            - printenv
-  - name: runtime
+#   - name: webhookOutging
+#     type: webhook
+#     configuration:
+#       integrationName: vijay_external
+#     initialVersion:
+#       payload: "vijay"      
+      
+  - name: runtimeincoming
     setup: 
       environmentVariables:
         readOnly:
@@ -48,9 +40,9 @@ pipelines:
             options: "--env VIJAY=kumar"
         requires:
           resources:
-             - webhookIntegrationResource2   
+             - vijay_internal  
     steps:    
-      - name: test1
+      - name: incoming
         type: bash
 #         setup:
 #           runtime:
@@ -62,15 +54,40 @@ pipelines:
         #triggeredBy:
         #   resources:
         #     - test
-        outputResources:
-          - webhookIntegrationResource1
+#         outputResources:
+#           - vijay_external
         execution:
           onExecute:
             - echo "vijay"
 #             - sudo dd if=/dev/urandom of=file.txt count=1000000 bs=1100
             - printenv
             - node --version
-            - write_output webhookIntegrationResource1 payload=$STEP_ID
+# pipelines:
+#   - name: runtimeoutgoing
+#     steps:
+#       - name: outgoing
+#         type: bash
+#         execution:
+#           onExecute:
+#             - echo yay
+#             - printenv            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+#             - write_output webhookIntegrationResource1 payload=$STEP_ID
 #             - save_run_state $(pwd)/file.txt impfile
 
 #       - name: test2
