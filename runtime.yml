@@ -6,20 +6,20 @@ resources:
       integrationName: vijay_git
       branches:
         only: master
-    initialVersion:
+    version:
       sha: master
   - name: webhookIncoming
     type: webhook
     configuration:
       integrationName: vijay_internal
-    initialVersion:
+    version:
       payload: "reddy"
 
 #   - name: webhookOutging
 #     type: webhook
 #     configuration:
 #       integrationName: vijay_external
-#     initialVersion:
+#     version:
 #       payload: "vijay"      
       
   - name: runtimeincoming
