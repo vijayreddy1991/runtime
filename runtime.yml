@@ -22,55 +22,55 @@ resources:
 #     version:
 #       payload: "vijay"      
       
-  - name: runtimeincoming
-    setup: 
-      environmentVariables:
-        readOnly:
-          Number: 27
-      runtime:       
-        type: image
-        image:
-#           auto:
-#             language: nodejs
-#             versions:
-#               - 10.15.3
-          custom:
-            name: "drydock/u18node"
-            tag: "master"
-            options: "--env VIJAY=kumar"
-        requires:
-          resources:
-             - vijay_internal  
-    steps:    
-      - name: incoming
-        type: bash
-#         setup:
-#           runtime:
-#             type: image
-#             image:
-#              custom:
-#                name: drydock/u18node
-#                tag: master
-        #triggeredBy:
-        #   resources:
-        #     - test
-#         outputResources:
-#           - vijay_external
-        execution:
-          onExecute:
-            - echo "vijay"
-#             - sudo dd if=/dev/urandom of=file.txt count=1000000 bs=1100
-            - printenv
-            - node --version
-# pipelines:
-#   - name: runtimeoutgoing
-#     steps:
-#       - name: outgoing
+#   - name: runtimeincoming
+#     setup: 
+#       environmentVariables:
+#         readOnly:
+#           Number: 27
+#       runtime:       
+#         type: image
+#         image:
+# #           auto:
+# #             language: nodejs
+# #             versions:
+# #               - 10.15.3
+#           custom:
+#             name: "drydock/u18node"
+#             tag: "master"
+#             options: "--env VIJAY=kumar"
+#         requires:
+#           resources:
+#              - vijay_internal  
+#     steps:    
+#       - name: incoming
 #         type: bash
+# #         setup:
+# #           runtime:
+# #             type: image
+# #             image:
+# #              custom:
+# #                name: drydock/u18node
+# #                tag: master
+#         #triggeredBy:
+#         #   resources:
+#         #     - test
+# #         outputResources:
+# #           - vijay_external
 #         execution:
 #           onExecute:
-#             - echo yay
-#             - printenv            
+#             - echo "vijay"
+# #             - sudo dd if=/dev/urandom of=file.txt count=1000000 bs=1100
+#             - printenv
+#             - node --version
+# # pipelines:
+# #   - name: runtimeoutgoing
+# #     steps:
+# #       - name: outgoing
+# #         type: bash
+# #         execution:
+# #           onExecute:
+# #             - echo yay
+# #             - printenv            
             
             
             
