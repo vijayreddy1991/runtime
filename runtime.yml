@@ -1,15 +1,15 @@
 resources:
   - name: test
-    type: gitRepo
+    type: GitRepo
     repoPath: vijayreddy1991/runtime
     configuration:
-      integrationName: vijay_git
+      integrationName: vijay_github
       branches:
         only: master
     version:
       sha: master
   - name: webhookIncoming
-    type: webhook
+    type: Webhook
     configuration:
       integrationName: vijay_internal
     version:
