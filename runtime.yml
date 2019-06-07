@@ -8,12 +8,12 @@ resources:
         include: master      
     version:
       sha: master
-  - name: webhookIncoming
-    type: Webhook
-    configuration:
-      integrationName: vijay_internal
-    version:
-      payload: "reddy"
+#   - name: webhookIncoming
+#     type: Webhook
+#     configuration:
+#       integrationName: vijay_internal
+#     version:
+#       payload: "reddy"
 
 #   - name: webhookOutging
 #     type: webhook
