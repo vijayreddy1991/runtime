@@ -4,10 +4,135 @@ resources:
     configuration:
       gitProvider: vijay_github
       path: vijayreddy1991/runtime
+      files:
+        include: <regularExp>
+        exclude: <regularExp> 
       branches:
         include: master      
     version:
       sha: master
+      
+pipelines:
+  - name: files
+    steps:
+      - name: test1
+        type: bash
+        triggeredBy:
+           resources:
+             - test        
+        execution:
+          onExecute:
+            - echo yay
+            - printenv       
+      
+      - name: test2
+        type: bash   
+        triggeredBy:
+          steps:
+            - test1
+        execution:
+          onExecute:
+            - echo "test2"            
+
+      - name: test3
+        type: bash  
+        triggeredBy:
+          steps:
+            - test2
+        execution:
+          onExecute:
+            - echo "Test3"
+#             - restore_run_state impfile exmple.txt
+#             - du -h
+
+      - name: test4
+        type: bash 
+        triggeredBy:
+          steps:
+            - test3
+        execution:
+          onExecute:
+            - echo "test4"
+#             - restore_run_state impfile exmple.txt
+#             - du -h      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #   - name: webhookIncoming
 #     type: Webhook
 #     configuration:
@@ -51,9 +176,9 @@ resources:
 # #              custom:
 # #                name: drydock/u18node
 # #                tag: master
-#         #triggeredBy:
-#         #   resources:
-#         #     - test
+        #triggeredBy:
+        #   resources:
+        #     - test
 # #         outputResources:
 # #           - vijay_external
 #         execution:
@@ -62,62 +187,4 @@ resources:
 # #             - sudo dd if=/dev/urandom of=file.txt count=1000000 bs=1100
 #             - printenv
 #             - node --version
-# # pipelines:
-# #   - name: runtimeoutgoing
-# #     steps:
-# #       - name: outgoing
-# #         type: bash
-# #         execution:
-# #           onExecute:
-# #             - echo yay
-# #             - printenv            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-#             - write_output webhookIntegrationResource1 payload=$STEP_ID
-#             - save_run_state $(pwd)/file.txt impfile
-
-#       - name: test2
-#         type: bash   
-#         triggeredBy:
-#           steps:
-#             - test1
-#         execution:
-#           onExecute:
-#             - echo "test2"
-            
-
-#       - name: test3
-#         type: bash  
-#         triggeredBy:
-#           steps:
-#             - test2
-#         execution:
-#           onExecute:
-#             - echo "Test3"
-#             - restore_run_state impfile exmple.txt
-#             - du -h
-
-#       - name: test4
-#         type: bash 
-#         triggeredBy:
-#           steps:
-#             - test3
-#         execution:
-#           onExecute:
-#             - echo "test4"
-#             - restore_run_state impfile exmple.txt
-#             - du -h
+           
