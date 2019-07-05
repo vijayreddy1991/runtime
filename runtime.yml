@@ -22,8 +22,8 @@ pipelines:
               custom:
                 name: drydock/u18node
                 tag: master          
-        inputResources:
-             - test        
+          inputResources:
+               - test        
         execution:
           onExecute:
             - echo vijay
@@ -47,8 +47,8 @@ pipelines:
               custom:
                 name: drydock/u18go
                 tag: master         
-        inputSteps:
-            - test1
+          inputSteps:
+              - test1
         execution:
           onExecute:
             - echo "test2"  
@@ -70,8 +70,8 @@ pipelines:
               custom:
                 name: drydock/u18cpp
                 tag: master          
-        inputSteps:
-            - test2
+          inputSteps:
+              - test2
         execution:
           onExecute:
             - echo "Test3"
@@ -94,8 +94,8 @@ pipelines:
               custom:
                 name: drydock/u18java
                 tag: master          
-        inputSteps:
-            - test3
+          inputSteps:
+              - test3
         execution:
           onExecute:
             - echo "test4"
