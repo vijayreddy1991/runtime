@@ -4,9 +4,6 @@ resources:
     configuration:
       gitProvider: vijay_github
       path: vijayreddy1991/runtime
-      files:
-        include: <regularExp>
-        exclude: <regularExp> 
       branches:
         include: master      
     version:
@@ -17,45 +14,104 @@ pipelines:
     steps:
       - name: test1
         type: bash
+        configuration:
+          nodePool: ubuntu16
+          runtime:            
+            type: image
+            image:
+              custom:
+                name: drydock/u18node
+                tag: master          
         triggeredBy:
            resources:
              - test        
         execution:
           onExecute:
-            - echo yay
-            - printenv       
+            - echo vijay
+            - jfrog --version
+            - aws --version
+            - git --version
+            - eb --version
+            - kubectl version --client
+            - gcloud --version  
+            - node --version
+            - nvm --version
+            - nvm list
       
       - name: test2
-        type: bash   
+        type: bash  
+        configuration:
+          nodePool: ubuntu16
+          runtime:            
+            type: image
+            image:
+              custom:
+                name: drydock/u18go
+                tag: master         
         triggeredBy:
           steps:
             - test1
         execution:
           onExecute:
-            - echo "test2"            
+            - echo "test2"  
+            - jfrog --version
+            - aws --version
+            - git --version
+            - eb --version
+            - kubectl version --client
+            - gcloud --version
+            - gvm list
 
       - name: test3
         type: bash  
+        configuration:
+          nodePool: ubuntu16
+          runtime:            
+            type: image
+            image:
+              custom:
+                name: drydock/u18cpp
+                tag: master          
         triggeredBy:
           steps:
             - test2
         execution:
           onExecute:
             - echo "Test3"
-#             - restore_run_state impfile exmple.txt
-#             - du -h
+            - jfrog --version
+            - aws --version
+            - git --version
+            - eb --version
+            - kubectl version --client
+            - gcloud --version
+            - clang --version
+            - gcc --version
 
       - name: test4
         type: bash 
+        configuration:
+          nodePool: ubuntu16
+          runtime:            
+            type: image
+            image:
+              custom:
+                name: drydock/u18java
+                tag: master          
         triggeredBy:
           steps:
             - test3
         execution:
           onExecute:
             - echo "test4"
-#             - restore_run_state impfile exmple.txt
-#             - du -h      
-
+            - jfrog --version
+            - aws --version
+            - git --version
+            - eb --version
+            - kubectl version --client
+            - gcloud --version
+            - gradle --version
+            - update-alternatives --config java
+            
 
 
 
