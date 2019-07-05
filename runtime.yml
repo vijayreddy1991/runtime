@@ -10,7 +10,7 @@ resources:
       sha: master
       
 pipelines:
-  - name: files
+  - name: VERSIONLIST
     steps:
       - name: test1
         type: Bash
