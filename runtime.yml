@@ -58,6 +58,7 @@ pipelines:
             - eb --version
             - kubectl version --client
             - gcloud --version
+            - source /root/.gvm/scripts/gvm
             - gvm list
 
       - name: test3
