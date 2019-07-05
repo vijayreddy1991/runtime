@@ -22,8 +22,7 @@ pipelines:
               custom:
                 name: drydock/u18node
                 tag: master          
-        triggeredBy:
-           resources:
+        inputResources:
              - test        
         execution:
           onExecute:
@@ -48,8 +47,7 @@ pipelines:
               custom:
                 name: drydock/u18go
                 tag: master         
-        triggeredBy:
-          steps:
+        inputSteps:
             - test1
         execution:
           onExecute:
@@ -72,8 +70,7 @@ pipelines:
               custom:
                 name: drydock/u18cpp
                 tag: master          
-        triggeredBy:
-          steps:
+        inputSteps:
             - test2
         execution:
           onExecute:
@@ -97,8 +94,7 @@ pipelines:
               custom:
                 name: drydock/u18java
                 tag: master          
-        triggeredBy:
-          steps:
+        inputSteps:
             - test3
         execution:
           onExecute:
