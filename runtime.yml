@@ -13,7 +13,7 @@ pipelines:
   - name: files
     steps:
       - name: test1
-        type: bash
+        type: Bash
         configuration:
           nodePool: ubuntu16
           runtime:            
@@ -39,7 +39,7 @@ pipelines:
             - nvm list
       
       - name: test2
-        type: bash  
+        type: Bash  
         configuration:
           nodePool: ubuntu16
           runtime:            
@@ -63,7 +63,7 @@ pipelines:
             - gvm list
 
       - name: test3
-        type: bash  
+        type: Bash  
         configuration:
           nodePool: ubuntu16
           runtime:            
@@ -88,7 +88,7 @@ pipelines:
             - gcc --version
 
       - name: test4
-        type: bash 
+        type: Bash 
         configuration:
           nodePool: ubuntu16
           runtime:            
