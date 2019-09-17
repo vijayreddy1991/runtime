@@ -15,6 +15,7 @@ pipelines:
       - name: test1
         type: Bash
         configuration:
+          affinityGroup: A        
           chronological: true       
 #           nodePool: ubuntu16
           runtime:            
@@ -40,8 +41,8 @@ pipelines:
       - name: test2
         type: Bash  
         configuration:
-          timeoutSeconds: 2          
-#           chronological: false         
+          affinityGroup: A                   
+          chronological: false         
 #           nodePool: ubuntu16
           runtime:            
             type: image
@@ -66,7 +67,7 @@ pipelines:
       - name: test3
         type: Bash  
         configuration:
-          timeoutSeconds: 2          
+          affinityGroup: A                   
           chronological: true      
 #           nodePool: ubuntu16
           runtime:            
@@ -92,8 +93,8 @@ pipelines:
       - name: test4
         type: Bash  
         configuration:
-          timeoutSeconds: 2          
-          chronological: false         
+          affinityGroup: B                 
+          chronological: true        
 #           nodePool: ubuntu16
           runtime:            
             type: image
@@ -116,9 +117,9 @@ pipelines:
             
       - name: test5
         type: Bash  
-        configuration:
-          timeoutSeconds: 2          
-          chronological: false       
+        configuration:   
+          affinityGroup: B            
+          chronological: false    
 #           nodePool: ubuntu16
           runtime:            
             type: image
@@ -138,7 +139,29 @@ pipelines:
             - kubectl version --client
             - gcloud --version
 
-
+      - name: test6
+        type: Bash  
+        configuration:
+          affinityGroup: B                  
+          chronological: true    
+#           nodePool: ubuntu16
+          runtime:            
+            type: image
+            image:
+              custom:
+                name: drydock/u18java
+                tag: master         
+          inputSteps:
+              - name: test5
+        execution:
+          onExecute:
+            - echo "test2"  
+            - jfrog --version
+            - aws --version
+            - git --version
+            - eb --version
+            - kubectl version --client
+            - gcloud --version
 
 
 
