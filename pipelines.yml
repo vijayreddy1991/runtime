@@ -41,7 +41,7 @@ pipelines:
         type: Bash  
         configuration:
           timeoutSeconds: 2          
-          chronological: true         
+          chronological: false         
 #           nodePool: ubuntu16
           runtime:            
             type: image
