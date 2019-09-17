@@ -75,7 +75,7 @@ pipelines:
                 name: drydock/u18cpp
                 tag: master          
           inputSteps:
-              - name: test2
+              - name: test1
         execution:
           onExecute:
             - echo "Test3"
@@ -91,6 +91,7 @@ pipelines:
       - name: test4
         type: Bash 
         configuration:
+          chronological: true        
 #           nodePool: ubuntu16
           runtime:            
             type: image
@@ -99,7 +100,7 @@ pipelines:
                 name: drydock/u18java
                 tag: master          
           inputSteps:
-              - name: test3
+              - name: test1
         execution:
           onExecute:
             - echo "test4"
@@ -112,7 +113,30 @@ pipelines:
             - gradle --version
             - update-alternatives --config java
             
-
+      - name: test5
+        type: Bash 
+        configuration:
+          chronological: true        
+#           nodePool: ubuntu16
+          runtime:            
+            type: image
+            image:
+              custom:
+                name: drydock/u18java
+                tag: master          
+          inputSteps:
+              - name: test1
+        execution:
+          onExecute:
+            - echo "test4"
+            - jfrog --version
+            - aws --version
+            - git --version
+            - eb --version
+            - kubectl version --client
+            - gcloud --version
+            - gradle --version
+            - update-alternatives --config java
 
 
 
