@@ -21,22 +21,21 @@ pipelines:
             type: image
             image:
               custom:
-                name: drydock/u18node
+                name: drydock/u18go
                 tag: master          
           inputResources:
                - name: test1234        
         execution:
           onExecute:
-            - echo vijay
+            - echo "test"  
             - jfrog --version
             - aws --version
             - git --version
             - eb --version
             - kubectl version --client
-            - gcloud --version  
-            - node --version
-            - nvm --version
-            - nvm list
+            - gcloud --version
+            - source /root/.gvm/scripts/gvm
+            - gvm list
       
       - name: test2
         type: Bash  
@@ -75,7 +74,7 @@ pipelines:
                 name: drydock/u18go
                 tag: master         
           inputSteps:
-              - name: test1
+              - name: test2
         execution:
           onExecute:
             - echo "test2"  
@@ -100,7 +99,7 @@ pipelines:
                 name: drydock/u18go
                 tag: master         
           inputSteps:
-              - name: test1
+              - name: test3
         execution:
           onExecute:
             - echo "test2"  
@@ -125,7 +124,7 @@ pipelines:
                 name: drydock/u18go
                 tag: master         
           inputSteps:
-              - name: test1
+              - name: test4
         execution:
           onExecute:
             - echo "test2"  
