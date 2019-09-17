@@ -99,7 +99,7 @@ pipelines:
             type: image
             image:
               custom:
-                name: drydock/u18go
+                name: drydock/u18cpp
                 tag: master         
           inputSteps:
               - name: test3
@@ -125,7 +125,7 @@ pipelines:
             type: image
             image:
               custom:
-                name: drydock/u18go
+                name: drydock/u18java
                 tag: master         
           inputSteps:
               - name: test4
