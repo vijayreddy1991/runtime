@@ -91,7 +91,7 @@ pipelines:
       - name: test4
         type: Bash 
         configuration:
-          nodePool: ubuntu16
+#           nodePool: ubuntu16
           runtime:            
             type: image
             image:
