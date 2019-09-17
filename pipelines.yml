@@ -15,7 +15,7 @@ pipelines:
       - name: test1
         type: Bash
         configuration:
-          chronological: false         
+          chronological: true       
 #           nodePool: ubuntu16
           runtime:            
             type: image
@@ -90,7 +90,7 @@ pipelines:
       - name: test4
         type: Bash  
         configuration:
-          chronological: false          
+          chronological: true          
 #           nodePool: ubuntu16
           runtime:            
             type: image
@@ -99,7 +99,7 @@ pipelines:
                 name: drydock/u18go
                 tag: master         
           inputSteps:
-              - name: test3
+              - name: test1
         execution:
           onExecute:
             - echo "test2"  
@@ -115,7 +115,7 @@ pipelines:
       - name: test5
         type: Bash  
         configuration:
-          chronological: false          
+          chronological: true          
 #           nodePool: ubuntu16
           runtime:            
             type: image
