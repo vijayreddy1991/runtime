@@ -40,6 +40,7 @@ pipelines:
       - name: test2
         type: Bash  
         configuration:
+          timeoutSeconds: 2          
           chronological: true         
 #           nodePool: ubuntu16
           runtime:            
@@ -65,6 +66,7 @@ pipelines:
       - name: test3
         type: Bash  
         configuration:
+          timeoutSeconds: 2          
           chronological: true      
 #           nodePool: ubuntu16
           runtime:            
@@ -90,7 +92,8 @@ pipelines:
       - name: test4
         type: Bash  
         configuration:
-          chronological: true          
+          timeoutSeconds: 2          
+          chronological: false         
 #           nodePool: ubuntu16
           runtime:            
             type: image
@@ -99,7 +102,7 @@ pipelines:
                 name: drydock/u18go
                 tag: master         
           inputSteps:
-              - name: test1
+              - name: test3
         execution:
           onExecute:
             - echo "test2"  
@@ -115,7 +118,8 @@ pipelines:
       - name: test5
         type: Bash  
         configuration:
-          chronological: true          
+          timeoutSeconds: 2          
+          chronological: false       
 #           nodePool: ubuntu16
           runtime:            
             type: image
