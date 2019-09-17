@@ -4,10 +4,10 @@ resources:
     configuration:
       gitProvider: vijay_github
       path: vijayreddy1991/runtime
-      branches:
-        include: master      
-    version:
-      sha: master
+#       branches:
+#         include: master      
+#     version:
+#       sha: master
       
 pipelines:
   - name: VERSIONLIST
