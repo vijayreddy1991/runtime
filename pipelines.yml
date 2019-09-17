@@ -1,5 +1,5 @@
 resources:
-  - name: test
+  - name: test1234
     type: GitRepo
     configuration:
       gitProvider: vijay_github
