@@ -24,7 +24,7 @@ pipelines:
                 name: drydock/u18node
                 tag: master          
           inputResources:
-               - name: test        
+               - name: test1234        
         execution:
           onExecute:
             - echo vijay
