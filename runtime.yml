@@ -15,7 +15,8 @@ pipelines:
       - name: test1
         type: Bash
         configuration:
-          nodePool: ubuntu16
+          chronological: true          
+#           nodePool: ubuntu16
           runtime:            
             type: image
             image:
@@ -40,7 +41,8 @@ pipelines:
       - name: test2
         type: Bash  
         configuration:
-          nodePool: ubuntu16
+          chronological: true          
+#           nodePool: ubuntu16
           runtime:            
             type: image
             image:
@@ -64,7 +66,8 @@ pipelines:
       - name: test3
         type: Bash  
         configuration:
-          nodePool: ubuntu16
+          chronological: false         
+#           nodePool: ubuntu16
           runtime:            
             type: image
             image:
