@@ -16,7 +16,7 @@ pipelines:
         type: Bash
         configuration:
           affinityGroup: A        
-          chronological: true       
+          chronological: false      
 #           nodePool: ubuntu16
           runtime:            
             type: image
@@ -42,7 +42,7 @@ pipelines:
         type: Bash  
         configuration:
           affinityGroup: A                   
-          chronological: true        
+          chronological: false       
 #           nodePool: ubuntu16
           runtime:            
             type: image
@@ -68,7 +68,7 @@ pipelines:
         type: Bash  
         configuration:
           affinityGroup: A                   
-          chronological: true      
+          chronological: false      
 #           nodePool: ubuntu16
           runtime:            
             type: image
