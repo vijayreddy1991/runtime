@@ -43,7 +43,7 @@ pipelines:
         configuration:
           affinityGroup: A                   
           chronological: false       
-#           nodePool: ubuntu16
+          nodePool: node-RHEL-7
           runtime:            
             type: image
             image:
