@@ -15,7 +15,7 @@ pipelines:
       - name: test1
         type: Bash
         configuration:
-          affinityGroup: A        
+#           affinityGroup: A        
           chronological: false      
 #           nodePool: ubuntu16
           runtime:            
@@ -41,7 +41,7 @@ pipelines:
       - name: test2
         type: Bash  
         configuration:
-          affinityGroup: A                   
+#           affinityGroup: A                   
           chronological: false       
           nodePool: node-RHEL-7
           runtime:            
