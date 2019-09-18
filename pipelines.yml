@@ -19,7 +19,7 @@ pipelines:
           chronological: true       
 #           nodePool: ubuntu16
           runtime:            
-            type: host
+            type: image
             image:
               custom:
                 name: drydock/u18go
