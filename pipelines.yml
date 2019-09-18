@@ -38,57 +38,57 @@ pipelines:
             - source /root/.gvm/scripts/gvm
             - gvm list
       
-#       - name: test2$@3
-#         type: Bash  
-#         configuration:
-#           affinityGroup: A                   
-#           chronological: false         
-# #           nodePool: ubuntu16
-#           runtime:            
-#             type: image
-#             image:
-#               custom:
-#                 name: drydock/u18go
-#                 tag: master         
-#           inputSteps:
-#               - name: test1
-#         execution:
-#           onExecute:
-#             - echo "test2"  
-#             - jfrog --version
-#             - aws --version
-#             - git --version
-#             - eb --version
-#             - kubectl version --client
-#             - gcloud --version
-#             - source /root/.gvm/scripts/gvm
-#             - gvm list
+      - name: test2
+        type: Bash  
+        configuration:
+          affinityGroup: A                   
+          chronological: true        
+#           nodePool: ubuntu16
+          runtime:            
+            type: image
+            image:
+              custom:
+                name: drydock/u18go
+                tag: master         
+          inputSteps:
+              - name: test1
+        execution:
+          onExecute:
+            - echo "test2"  
+            - jfrog --version
+            - aws --version
+            - git --version
+            - eb --version
+            - kubectl version --client
+            - gcloud --version
+            - source /root/.gvm/scripts/gvm
+            - gvm list
 
-#       - name: test3
-#         type: Bash  
-#         configuration:
-#           affinityGroup: A                   
-#           chronological: true      
-# #           nodePool: ubuntu16
-#           runtime:            
-#             type: image
-#             image:
-#               custom:
-#                 name: drydock/u18go
-#                 tag: master         
-#           inputSteps:
-#               - name: test2
-#         execution:
-#           onExecute:
-#             - echo "test2"  
-#             - jfrog --version
-#             - aws --version
-#             - git --version
-#             - eb --version
-#             - kubectl version --client
-#             - gcloud --version
-#             - source /root/.gvm/scripts/gvm
-#             - gvm list
+      - name: test3
+        type: Bash  
+        configuration:
+          affinityGroup: A                   
+          chronological: true      
+#           nodePool: ubuntu16
+          runtime:            
+            type: image
+            image:
+              custom:
+                name: drydock/u18go
+                tag: master         
+          inputSteps:
+              - name: test2
+        execution:
+          onExecute:
+            - echo "test2"  
+            - jfrog --version
+            - aws --version
+            - git --version
+            - eb --version
+            - kubectl version --client
+            - gcloud --version
+            - source /root/.gvm/scripts/gvm
+            - gvm list
 
 #       - name: test4
 #         type: Bash  
