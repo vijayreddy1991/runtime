@@ -38,7 +38,7 @@ pipelines:
             - source /root/.gvm/scripts/gvm
             - gvm list
       
-      - name: test2
+      - name: test2$@3
         type: Bash  
         configuration:
           affinityGroup: A                   
