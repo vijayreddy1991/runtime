@@ -20,10 +20,10 @@ pipelines:
 #           nodePool: ubuntu16
           runtime:            
             type: host
-            image:
-              custom:
-                name: drydock/u18go
-                tag: master          
+#             image:
+#               custom:
+#                 name: drydock/u18go
+#                 tag: master          
           inputResources:
                - name: test1234        
         execution:
