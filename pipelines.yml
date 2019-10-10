@@ -1,109 +1,57 @@
-resources:
-  - name: test1234
-    type: GitRepo
-    configuration:
-      gitProvider: vijay_github
-      path: vijayreddy1991/runtime
-#       branches:
-#         include: master      
-#     version:
-#       sha: master
+# resources:
+#   - name: test1234
+#     type: GitRepo
+#     configuration:
+#       gitProvider: vijay_github
+#       path: vijayreddy1991/runtime
+# #       branches:
+# #         include: master      
+# #     version:
+# #       sha: master
       
-pipelines:
-  - name: VERSIONLIST
-    steps:
-      - name: test1
-        type: Bash
-        configuration:
-#           affinityGroup: A        
-#           chronological: true     
-#           nodePool: ubuntu16
-          runtime:            
-            type: image
-            image:
-              custom:
-                name: drydock/u18go
-                tag: master          
-          inputResources:
-               - name: test1234        
-        execution:
-          onExecute:
-            - echo "test"  
-            - jfrog --version
-            - aws --version
-            - git --version
-            - eb --version
-            - kubectl version --client
-            - gcloud --version
-            - source /root/.gvm/scripts/gvm
-            - gvm list
-      
-      - name: test2
-        type: Bash  
-        configuration:
-#           affinityGroup: A                   
-#           chronological: true      
-          nodePool: node-RHEL-7
-          runtime:            
-            type: image
-            image:
-              custom:
-                name: drydock/c7go
-                tag: master         
-          inputSteps:
-              - name: test1
-        execution:
-          onExecute:
-            - echo "test2"  
-            - jfrog --version
-            - aws --version
-            - git --version
-            - eb --version
-            - kubectl version --client
-            - gcloud --version
-            - source /root/.gvm/scripts/gvm
-            - gvm list
-
-      - name: test3
-        type: Bash  
-        configuration:
-#           affinityGroup: A                   
-#           chronological: false      
-#           nodePool: ubuntu16
-          runtime:            
-            type: image
-            image:
-              custom:
-                name: drydock/u18go
-                tag: master         
-          inputSteps:
-              - name: test2
-        execution:
-          onExecute:
-            - echo "test2"  
-            - jfrog --version
-            - aws --version
-            - git --version
-            - eb --version
-            - kubectl version --client
-            - gcloud --version
-            - source /root/.gvm/scripts/gvm
-            - gvm list
-
-#       - name: test4
-#         type: Bash  
+# pipelines:
+#   - name: VERSIONLIST
+#     steps:
+#       - name: test1
+#         type: Bash
 #         configuration:
-#           affinityGroup: B                 
-#           chronological: true        
+# #           affinityGroup: A        
+# #           chronological: true     
 # #           nodePool: ubuntu16
 #           runtime:            
 #             type: image
 #             image:
 #               custom:
-#                 name: drydock/u18cpp
+#                 name: drydock/u18go
+#                 tag: master          
+#           inputResources:
+#                - name: test1234        
+#         execution:
+#           onExecute:
+#             - echo "test"  
+#             - jfrog --version
+#             - aws --version
+#             - git --version
+#             - eb --version
+#             - kubectl version --client
+#             - gcloud --version
+#             - source /root/.gvm/scripts/gvm
+#             - gvm list
+      
+#       - name: test2
+#         type: Bash  
+#         configuration:
+# #           affinityGroup: A                   
+# #           chronological: true      
+#           nodePool: node-RHEL-7
+#           runtime:            
+#             type: image
+#             image:
+#               custom:
+#                 name: drydock/c7go
 #                 tag: master         
 #           inputSteps:
-#               - name: test3
+#               - name: test1
 #         execution:
 #           onExecute:
 #             - echo "test2"  
@@ -113,55 +61,107 @@ pipelines:
 #             - eb --version
 #             - kubectl version --client
 #             - gcloud --version
+#             - source /root/.gvm/scripts/gvm
+#             - gvm list
+
+#       - name: test3
+#         type: Bash  
+#         configuration:
+# #           affinityGroup: A                   
+# #           chronological: false      
+# #           nodePool: ubuntu16
+#           runtime:            
+#             type: image
+#             image:
+#               custom:
+#                 name: drydock/u18go
+#                 tag: master         
+#           inputSteps:
+#               - name: test2
+#         execution:
+#           onExecute:
+#             - echo "test2"  
+#             - jfrog --version
+#             - aws --version
+#             - git --version
+#             - eb --version
+#             - kubectl version --client
+#             - gcloud --version
+#             - source /root/.gvm/scripts/gvm
+#             - gvm list
+
+# #       - name: test4
+# #         type: Bash  
+# #         configuration:
+# #           affinityGroup: B                 
+# #           chronological: true        
+# # #           nodePool: ubuntu16
+# #           runtime:            
+# #             type: image
+# #             image:
+# #               custom:
+# #                 name: drydock/u18cpp
+# #                 tag: master         
+# #           inputSteps:
+# #               - name: test3
+# #         execution:
+# #           onExecute:
+# #             - echo "test2"  
+# #             - jfrog --version
+# #             - aws --version
+# #             - git --version
+# #             - eb --version
+# #             - kubectl version --client
+# #             - gcloud --version
 
             
-#       - name: test5
-#         type: Bash  
-#         configuration:   
-#           affinityGroup: B            
-#           chronological: false    
-# #           nodePool: ubuntu16
-#           runtime:            
-#             type: image
-#             image:
-#               custom:
-#                 name: drydock/u18java
-#                 tag: master         
-#           inputSteps:
-#               - name: test4
-#         execution:
-#           onExecute:
-#             - echo "test2"  
-#             - jfrog --version
-#             - aws --version
-#             - git --version
-#             - eb --version
-#             - kubectl version --client
-#             - gcloud --version
+# #       - name: test5
+# #         type: Bash  
+# #         configuration:   
+# #           affinityGroup: B            
+# #           chronological: false    
+# # #           nodePool: ubuntu16
+# #           runtime:            
+# #             type: image
+# #             image:
+# #               custom:
+# #                 name: drydock/u18java
+# #                 tag: master         
+# #           inputSteps:
+# #               - name: test4
+# #         execution:
+# #           onExecute:
+# #             - echo "test2"  
+# #             - jfrog --version
+# #             - aws --version
+# #             - git --version
+# #             - eb --version
+# #             - kubectl version --client
+# #             - gcloud --version
 
-#       - name: test6
-#         type: Bash  
-#         configuration:
-#           affinityGroup: B                  
-#           chronological: true    
-# #           nodePool: ubuntu16
-#           runtime:            
-#             type: image
-#             image:
-#               custom:
-#                 name: drydock/u18java
-#                 tag: master         
-#           inputSteps:
-#               - name: test5
-#         execution:
-#           onExecute:
-#             - echo "test2"  
-#             - jfrog --version
-#             - aws --version
-#             - git --version
-#             - eb --version
-#             - kubectl version --client
-#             - gcloud --version
+# #       - name: test6
+# #         type: Bash  
+# #         configuration:
+# #           affinityGroup: B                  
+# #           chronological: true    
+# # #           nodePool: ubuntu16
+# #           runtime:            
+# #             type: image
+# #             image:
+# #               custom:
+# #                 name: drydock/u18java
+# #                 tag: master         
+# #           inputSteps:
+# #               - name: test5
+# #         execution:
+# #           onExecute:
+# #             - echo "test2"  
+# #             - jfrog --version
+# #             - aws --version
+# #             - git --version
+# #             - eb --version
+# #             - kubectl version --client
+# #             - gcloud --version
 
 
 
