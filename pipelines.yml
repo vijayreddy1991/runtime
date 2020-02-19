@@ -1,42 +1,42 @@
-# resources:
-#   - name: test1234
-#     type: GitRepo
-#     configuration:
-#       gitProvider: vijay_github
-#       path: vijayreddy1991/runtime
-# #       branches:
-# #         include: master      
-# #     version:
-# #       sha: master
+resources:
+  - name: test1234
+    type: GitRepo
+    configuration:
+      gitProvider: s_git
+      path: vijayreddy1991/runtime
+#       branches:
+#         include: master      
+#     version:
+#       sha: master
       
-# pipelines:
-#   - name: VERSIONLIST
-#     steps:
-#       - name: test1
-#         type: Bash
-#         configuration:
-# #           affinityGroup: A        
-# #           chronological: true     
-# #           nodePool: ubuntu16
-#           runtime:            
-#             type: image
-#             image:
-#               custom:
-#                 name: drydock/u18go
-#                 tag: master          
-#           inputResources:
-#                - name: test1234        
-#         execution:
-#           onExecute:
-#             - echo "test"  
-#             - jfrog --version
-#             - aws --version
-#             - git --version
-#             - eb --version
-#             - kubectl version --client
-#             - gcloud --version
-#             - source /root/.gvm/scripts/gvm
-#             - gvm list
+pipelines:
+  - name: VERSIONLIST
+    steps:
+      - name: test1
+        type: Bash
+        configuration:
+#           affinityGroup: A        
+#           chronological: true     
+#           nodePool: ubuntu16
+          runtime:            
+            type: image
+            image:
+              custom:
+                name: drydock/u18go
+                tag: master          
+          inputResources:
+               - name: test1234        
+        execution:
+          onExecute:
+            - echo "test"  
+            - jfrog --version
+            - aws --version
+            - git --version
+            - eb --version
+            - kubectl version --client
+            - gcloud --version
+            - source /root/.gvm/scripts/gvm
+            - gvm list
       
 #       - name: test2
 #         type: Bash  
