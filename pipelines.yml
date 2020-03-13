@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: bit
-      path: vijaykp/public
+      path: vijayreddy1991/runtime
 
 pipelines:
   - name: pipelines
