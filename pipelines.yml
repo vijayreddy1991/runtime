@@ -18,7 +18,6 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - printen
 
       - name: S_Bash2
         type: Bash
