@@ -40,7 +40,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - printen
+            - printenv
             
 #       - name: S_Bash4
 #         type: Bash
