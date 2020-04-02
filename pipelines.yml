@@ -35,7 +35,7 @@ pipelines:
         type: Bash
         configuration:
 #          affinityGroup: A            
-#           nodePool: u18-us-west-2-dynamic        
+          nodePool: c7test        
           inputResources:
             - name: test1234
         execution:
