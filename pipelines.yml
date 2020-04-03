@@ -12,7 +12,7 @@ pipelines:
         type: Bash
         configuration:
 #          affinityGroup: A            
-          nodePool: u18-us-west-2-dynamic       
+          nodePool: c7test       
           inputResources:
             - name: test1234
         execution:
@@ -23,7 +23,7 @@ pipelines:
         type: Bash
         configuration:
 #          affinityGroup: A            
-          nodePool: u18-us-west-2-dynamic        
+          nodePool: c7test       
           inputSteps:
             - name: S_Bash1
         execution:
@@ -34,7 +34,7 @@ pipelines:
         type: Bash
         configuration:
 #          affinityGroup: A            
-#           nodePool: c7test        
+          nodePool: c7test        
           inputResources:
             - name: test1234
         execution:
