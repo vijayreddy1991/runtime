@@ -18,6 +18,8 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
+            - sudo docker images
+            - sudo docker ps -a
 
       - name: S_Bash2
         type: Bash
