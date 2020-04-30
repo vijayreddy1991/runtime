@@ -16,7 +16,7 @@ resources:
       branches:
         include: master        
       files:  # optional
-        include: test\/file1\b      
+        include: ^pipe.yml$  
 
 pipelines:
   - name: pipelines
