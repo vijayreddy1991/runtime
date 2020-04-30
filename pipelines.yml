@@ -1,16 +1,33 @@
-- name: git1
-type: GitRepo
-configuration:
-path: vijayreddy1991/runtime
-gitProvider: vijay
-branches:
-include: master
-- name: git2
-type: GitRepo
-configuration:
-path: vijayreddy1991/runtime
-gitProvider: vijay
-branches:
-include: master
-files:
-include: \test\/file\b
+
+resources:
+  - name: test1234
+    type: GitRepo
+    configuration:
+      gitProvider: vijay
+      path: vijayreddy1991/runtime
+      branches:
+        include: master      
+        
+#   - name: test12345
+#     type: GitRepo
+#     configuration:
+#       gitProvider: vijay
+#       path: vijayreddy1991/runtime
+#       branches:
+#         include: master        
+#       files:  # optional
+#         include: \test\/file\b      
+
+pipelines:
+  - name: pipelines
+    steps:
+      - name: S_Bash1
+        type: Bash
+        configuration: 
+          inputResources:
+            - name: test1234
+#             - name: test12345
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - prin
