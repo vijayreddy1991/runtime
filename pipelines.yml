@@ -1,0 +1,16 @@
+- name: git1
+type: GitRepo
+configuration:
+path: vijayreddy1991/runtime
+gitProvider: vijay
+branches:
+include: master
+- name: git2
+type: GitRepo
+configuration:
+path: vijayreddy1991/runtime
+gitProvider: vijay
+branches:
+include: master
+files:
+include: \test\/file\b
