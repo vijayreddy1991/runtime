@@ -8,15 +8,15 @@ resources:
       branches:
         include: master      
         
-#   - name: test12345
-#     type: GitRepo
-#     configuration:
-#       gitProvider: vijay
-#       path: vijayreddy1991/runtime
-#       branches:
-#         include: master        
-#       files:  # optional
-#         include: \test\/file\b      
+  - name: test12345
+    type: GitRepo
+    configuration:
+      gitProvider: vijay
+      path: vijayreddy1991/runtime
+      branches:
+        include: master        
+      files:  # optional
+        include: \test\/file\b      
 
 pipelines:
   - name: pipelines
@@ -26,11 +26,10 @@ pipelines:
         configuration: 
           inputResources:
             - name: test1234
-#             - name: test12345
+            - name: test12345
         execution:
           onExecute:
             - echo "executing step..."
-            - prin
             
             
             
