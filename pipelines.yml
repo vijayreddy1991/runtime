@@ -16,7 +16,7 @@ resources:
       branches:
         include: master        
       files:  # optional
-        include: file1      
+        include: test\/file1\b      
 
 pipelines:
   - name: pipelines
