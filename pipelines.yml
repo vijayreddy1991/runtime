@@ -12,11 +12,11 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: vijay
-      path: vijayreddy1991/runtime
+      path: vijayreddy1991/run
       branches:
         include: master        
       files:  # optional
-        include: \test\/file\b      
+        include: file1      
 
 pipelines:
   - name: pipelines
