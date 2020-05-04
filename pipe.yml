@@ -16,4 +16,3 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - prin
