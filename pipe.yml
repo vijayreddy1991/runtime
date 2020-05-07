@@ -5,34 +5,34 @@ resources:
       gitProvider: vijay
       path: vijayreddy1991/runtime
 
-# pipelines:
-#   - name: pipelines
-#     steps:
-#       - name: S_Bash1
-#         type: Bash
-#         configuration: 
-#           nodePool: c7test         
-#           inputResources:
-#             - name: test1234
-#         execution:
-#           onExecute:
-#             - echo "executing step..."
-
 pipelines:
-
-  - name: vijay_pipeline_power
+  - name: pipelines
     steps:
-
-      - name: restore_files
-        type: PowerShell
-        configuration:
-          nodePool: win-dyna-test        
+      - name: S_Bash1
+        type: Bash
+        configuration: 
+          nodePool: vijay         
           inputResources:
             - name: test1234
-
         execution:
           onExecute:
-            - write-output "testvariable1={{kumar}}"
-            - write-output "variable123={{ something }"
-            - write-output "testvariable2={{gitBranch}}"
-            - $testvariable2  
+            - echo "executing step..."
+
+# pipelines:
+
+#   - name: vijay_pipeline_power
+#     steps:
+
+#       - name: restore_files
+#         type: PowerShell
+#         configuration:
+#           nodePool: win-dyna-test        
+#           inputResources:
+#             - name: test1234
+
+#         execution:
+#           onExecute:
+#             - write-output "testvariable1={{kumar}}"
+#             - write-output "variable123={{ something }"
+#             - write-output "testvariable2={{gitBranch}}"
+#             - $testvariable2  
