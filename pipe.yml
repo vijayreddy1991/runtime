@@ -17,6 +17,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
+            - docker pull ubuntu
 
 # pipelines:
 
