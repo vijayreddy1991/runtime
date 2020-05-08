@@ -39,6 +39,7 @@ pipelines:
             - docker pull drydock/u18node:master
             - docker pull drydock/u16node:master
             - docker pull ubuntu
+            - df -h
 
 # pipelines:
 
