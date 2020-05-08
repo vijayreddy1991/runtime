@@ -19,20 +19,20 @@ pipelines:
             - echo "executing step..."
             - docker pull drydock/u16:master
             - docker pull drydock/u16all:master
-            - docker pull drydock/u16javaall:master
+            - docker pull drydock/u16javall:master
             - docker pull drydock/u16phpall:master
             - docker pull drydock/u16scaall:master
             - docker pull drydock/u16nodall:master
             - docker pull drydock/u14:master
             - docker pull drydock/u14all:master
-            - docker pull drydock/u14javaall:master
+            - docker pull drydock/u14javall:master
             - docker pull drydock/u14phpall:master
             - docker pull drydock/u14scaall:master
             - docker pull drydock/u14nodall:master
             - docker pull drydock/c7:master
             - docker pull drydock/u14all:master
             - docker pull drydock/c7all:master
-            - docker pull drydock/c7javaall:master
+            - docker pull drydock/c7javall:master
             - docker pull drydock/c7phpall:master
             - docker pull drydock/c7scaall:master
             - docker pull drydock/c7nodall:master
