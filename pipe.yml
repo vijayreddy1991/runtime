@@ -17,6 +17,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
+            - get-childitem $res_test1234_resourcePath
             - fsutil file createnew test1 10737418240
             - fsutil file createnew test2 10737418240
             - fsutil file createnew test3 10737418240
@@ -26,6 +27,7 @@ pipelines:
             - fsutil file createnew test7 10737418240
             - fsutil file createnew test8 10737418240
             - fsutil file createnew test9 10737418240
+            - get-childitem $res_test1234_resourcePath
             - fsutil file createnew test10 10737418240
 #             - docker pull drydock/w16:master
 #             - docker pull drydock/w16dotnetcore:master
