@@ -20,7 +20,7 @@ pipelines:
             - docker pull drydock/w16:master
             - docker pull drydock/w16dotnetcore:master
             - docker pull drydock/w16aspnetcore:master
-            - docker pull mcr.microsoft.com/windows:ltsc2019
+#             - docker pull mcr.microsoft.com/windows:ltsc2019
             - docker pull mcr.microsoft.com/windows/servercore:ltsc2019
             - docker pull mcr.microsoft.com/windows/nanoserver:ltsc2019
             - docker pull mcr.microsoft.com/windows/iotcore:ltsc2019
