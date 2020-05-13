@@ -17,7 +17,17 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - fsutil file createnew test 107374182400
+            - fsutil file createnew test1 10737418240
+            - GetFileSize  test1
+            - fsutil file createnew test2 10737418240
+            - fsutil file createnew test3 10737418240
+            - fsutil file createnew test4 10737418240
+            - fsutil file createnew test5 10737418240
+            - fsutil file createnew test6 10737418240
+            - fsutil file createnew test7 10737418240
+            - fsutil file createnew test8 10737418240
+            - fsutil file createnew test9 10737418240
+            - fsutil file createnew test10 10737418240
 #             - docker pull drydock/w16:master
 #             - docker pull drydock/w16dotnetcore:master
 #             - docker pull drydock/w16aspnetcore:master
