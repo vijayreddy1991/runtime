@@ -17,7 +17,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - fsutil file createnew 100gb.test 107374182400
+            - fsutil file createnew test 10737 #4182400
 #             - docker pull drydock/w16:master
 #             - docker pull drydock/w16dotnetcore:master
 #             - docker pull drydock/w16aspnetcore:master
