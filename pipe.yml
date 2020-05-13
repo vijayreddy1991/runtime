@@ -18,7 +18,6 @@ pipelines:
           onExecute:
             - echo "executing step..."
             - fsutil file createnew test1 10737418240
-            - GetFileSize  test1
             - fsutil file createnew test2 10737418240
             - fsutil file createnew test3 10737418240
             - fsutil file createnew test4 10737418240
