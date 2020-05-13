@@ -24,7 +24,6 @@ pipelines:
             - docker pull mcr.microsoft.com/windows/servercore
             - docker pull mcr.microsoft.com/windows/nanoserver
             - docker pull mcr.microsoft.com/windows/iotcore
-            - 
 #             - docker pull drydock/u16all:master
 #             - docker pull drydock/u16javall:master
 #             - docker pull drydock/u16phpall:master
