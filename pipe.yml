@@ -8,7 +8,7 @@ resources:
 pipelines:
   - name: pipelines
     steps:
-      - name: S_Bash1
+      - name: S_vijaykumar
         type: PowerShell
         configuration: 
           nodePool: vijay_win         
