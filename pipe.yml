@@ -26,6 +26,7 @@ pipelines:
             - fsutil file createnew test6 10737418240
             - fsutil file createnew test7 10737418240
             - fsutil file createnew test8 10737418240
+            - get-childitem $res_test1234_resourcePath
             - fsutil file createnew test9 10737418240
             - get-childitem $res_test1234_resourcePath
             - fsutil file createnew test10 10737418240
@@ -57,7 +58,6 @@ pipelines:
 #             - docker pull drydock/u18node:master
 #             - docker pull drydock/u16node:master
 #             - docker pull ubuntu
-            - df -h
 
 # pipelines:
 
