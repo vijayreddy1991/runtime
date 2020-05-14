@@ -167,7 +167,8 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step13          
+            - name: step13
+            - name: step4
         execution:
           onExecute:
             - echo "executing step..."    
@@ -178,7 +179,8 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step14          
+            - name: step14 
+            - name: step5
         execution:
           onExecute:
             - echo "executing step..."   
@@ -189,7 +191,8 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step15          
+            - name: step15 
+            - - name: step6
         execution:
           onExecute:
             - echo "executing step..."    
@@ -200,7 +203,8 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step16          
+            - name: step16 
+            - name: step4
         execution:
           onExecute:
             - echo "executing step..."   
@@ -211,7 +215,8 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step17          
+            - name: step17  
+            - name: step4
         execution:
           onExecute:
             - echo "executing step..."    
@@ -222,7 +227,8 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step18          
+            - name: step18 
+            - name: step14
         execution:
           onExecute:
             - echo "executing step..."   
@@ -233,7 +239,8 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step19          
+            - name: step19 
+            - name: step6
         execution:
           onExecute:
             - echo "executing step..."    
@@ -244,7 +251,8 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step20          
+            - name: step20 
+            - name: step9
         execution:
           onExecute:
             - echo "executing step..."   
@@ -255,7 +263,8 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step21          
+            - name: step21
+            - name: step4
         execution:
           onExecute:
             - echo "executing step..."    
@@ -266,7 +275,8 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step22          
+            - name: step22  
+            - name: step4
         execution:
           onExecute:
             - echo "executing step..."   
@@ -277,7 +287,8 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step23          
+            - name: step23 
+            - name: step4
         execution:
           onExecute:
             - echo "executing step..."    
