@@ -11,12 +11,13 @@ pipelines:
       - name: step1
         type: Bash
         configuration:  
-          nodePool: vijay_win_2019        
+#           nodePool: vijay_win_2019        
           inputResources:
             - name: git_test_100
         execution:
           onExecute:
             - echo "executing step..."
+            - ghkghkgkhgi
             
       - name: step2
         type: Bash
