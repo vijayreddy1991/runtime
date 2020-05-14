@@ -132,7 +132,7 @@ pipelines:
             - name: git_test_100
           inputSteps:
             - name: step10
-            -- name: step1
+            - name: step1
         execution:
           onExecute:
             - echo "executing step..."   
