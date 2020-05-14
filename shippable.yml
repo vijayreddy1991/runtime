@@ -10,7 +10,8 @@ pipelines:
     steps:
       - name: step1
         type: Bash
-        configuration:        
+        configuration:  
+           nodePool: vijay_win_2019        
           inputResources:
             - name: git_test_100
         execution:
