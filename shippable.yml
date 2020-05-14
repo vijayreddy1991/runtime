@@ -39,7 +39,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step4
+      - name: step4
         type: Bash
         configuration:        
           inputResources:
@@ -83,7 +83,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step8
+      - name: step8
         type: Bash
         configuration:        
           inputResources:
@@ -127,7 +127,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step12
+      - name: step12
         type: Bash
         configuration:        
           inputResources:
@@ -171,7 +171,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step16
+      - name: step16
         type: Bash
         configuration:        
           inputResources:
@@ -215,7 +215,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step20
+      - name: step20
         type: Bash
         configuration:        
           inputResources:
@@ -259,7 +259,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step24
+      - name: step24
         type: Bash
         configuration:        
           inputResources:
@@ -303,7 +303,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step28
+      - name: step28
         type: Bash
         configuration:        
           inputResources:
@@ -347,7 +347,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step32
+      - name: step32
         type: Bash
         configuration:        
           inputResources:
@@ -391,7 +391,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step36
+      - name: step36
         type: Bash
         configuration:        
           inputResources:
@@ -435,7 +435,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step40
+      - name: step40
         type: Bash
         configuration:        
           inputResources:
@@ -457,7 +457,7 @@ pipelines:
           onExecute:
             - echo "executing step..."     
             
-       - name: step42
+      - name: step42
         type: Bash
         configuration:        
           inputResources:
@@ -501,7 +501,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step46
+      - name: step46
         type: Bash
         configuration:        
           inputResources:
@@ -545,7 +545,7 @@ pipelines:
           onExecute:
             - echo "executing step..."   
             
-       - name: step50
+      - name: step50
         type: Bash
         configuration:        
           inputResources:
