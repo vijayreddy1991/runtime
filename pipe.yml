@@ -20,9 +20,13 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
+            - df -h
             - docker images
+            - sudo docker rmi f4b00d59cd71
             - cd /opt
             - pwd
+            - docker images
+            - df -h
             - fallocate -l 10G huge_file.dat
             - df -h
             - fallocate -l 10G huge_file.dat1
