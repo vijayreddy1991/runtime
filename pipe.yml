@@ -9,7 +9,7 @@ pipelines:
   - name: pipelines
     steps:
       - name: S_vijaykumar
-        type: PowerShell
+        type: Bash #PowerShell
         configuration: 
 #           nodePool: vijay_win_2019        
           inputResources:
