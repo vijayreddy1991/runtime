@@ -21,11 +21,18 @@ pipelines:
           onExecute:
             - echo "executing step..."
             - docker images
+            - cd /opt
+            - pwd
             - fallocate -l 10G huge_file.dat
+            - df -h
             - fallocate -l 10G huge_file.dat1
+            - df -h
             - fallocate -l 10G huge_file.dat2
+            - df -h
             - fallocate -l 10G huge_file.dat3
+            - df -h
             - fallocate -l 10G huge_file.dat4
+            - df -h
             - fallocate -l 10G huge_file.dat5
             - fallocate -l 10G huge_file.dat6
             - fallocate -l 10G huge_file.dat7
@@ -73,6 +80,12 @@ pipelines:
 #             - docker pull drydock/u18node:master
 #             - docker pull drydock/u16node:master
 #             - docker pull ubuntu
+          onSuccess:
+            - echo "Job well done!"
+            - rm -rf huge_file.dat huge_file.dat1 huge_file.dat2 huge_file.dat3 huge_file.dat4 huge_file.dat5 huge_file.dat6 huge_file.dat7 huge_file.dat8 huge_file.dat9
+          onFailure:
+            - echo "uh oh, something went wrong"
+            - rm -rf huge_file.dat huge_file.dat1 huge_file.dat2 huge_file.dat3 huge_file.dat4 huge_file.dat5 huge_file.dat6 huge_file.dat7 huge_file.dat8 huge_file.dat9
 
 # pipelines:
 
