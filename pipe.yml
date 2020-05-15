@@ -20,6 +20,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
+            - docker images
             - fallocate -l 10G huge_file.dat
             - fallocate -l 10G huge_file.dat1
             - fallocate -l 10G huge_file.dat2
