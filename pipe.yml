@@ -29,15 +29,16 @@ pipelines:
             - df -h
             - fallocate -l 10G huge_file.dat2
             - df -h
-            - fallocate -l 10G huge_file.dat3
+            - fallocate -l 1G huge_file.dat3
             - df -h
-            - fallocate -l 10G huge_file.dat4
+            - fallocate -l 1G huge_file.dat4
             - df -h
-            - fallocate -l 10G huge_file.dat5
-            - fallocate -l 10G huge_file.dat6
-            - fallocate -l 10G huge_file.dat7
-            - fallocate -l 10G huge_file.dat8
-            - fallocate -l 10G huge_file.dat9
+            - fallocate -l 1G huge_file.dat5
+            - fallocate -l 1G huge_file.dat6
+            - fallocate -l 1G huge_file.dat7
+            - fallocate -l 1G huge_file.dat8
+            - df -h
+            - fallocate -l 1G huge_file.dat9
 #             - get-childitem $res_test1234_resourcePath
 #             - fsutil file createnew test1 10737418240
 #             - fsutil file createnew test2 10737418240
