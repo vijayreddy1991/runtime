@@ -11,7 +11,7 @@ pipelines:
       - name: S_vijaykumar
         type: PowerShell
         configuration: 
-          nodePool: vijay_win_2019        
+#           nodePool: vijay_win_2019        
           inputResources:
             - name: test1234
         execution:
