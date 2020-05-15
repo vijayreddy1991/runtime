@@ -31,11 +31,12 @@ pipelines:
             - df -h
             - fallocate -l 1G huge_file.dat3
             - df -h
-            - fallocate -l 1G huge_file.dat4
+            - fallocate -l 5G huge_file.dat4
             - df -h
             - fallocate -l 1G huge_file.dat5
             - fallocate -l 1G huge_file.dat6
             - fallocate -l 1G huge_file.dat7
+            - df -h
             - fallocate -l 1G huge_file.dat8
             - df -h
             - fallocate -l 1G huge_file.dat9
