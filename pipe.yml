@@ -9,9 +9,9 @@ pipelines:
   - name: pipelines
     steps:
       - name: S_vijaykumar
-        type: Bash #PowerShell
+        type: PowerShell
         configuration: 
-#           nodePool: vijay_win_2019        
+          nodePool: vijay_win_2019        
           inputResources:
             - name: test1234
           runtime:
@@ -21,29 +21,30 @@ pipelines:
           onExecute:
             - echo "executing step..."
             - docker images
-            - fallocate -l 10G huge_file.dat
-            - fallocate -l 10G huge_file.dat1
-            - fallocate -l 10G huge_file.dat2
-            - fallocate -l 10G huge_file.dat3
-            - fallocate -l 10G huge_file.dat4
-            - fallocate -l 10G huge_file.dat5
-            - fallocate -l 10G huge_file.dat6
-            - fallocate -l 10G huge_file.dat7
-            - fallocate -l 10G huge_file.dat8
-            - fallocate -l 10G huge_file.dat9
-#             - get-childitem $res_test1234_resourcePath
-#             - fsutil file createnew test1 10737418240
-#             - fsutil file createnew test2 10737418240
-#             - fsutil file createnew test3 10737418240
-#             - fsutil file createnew test4 10737418240
-#             - fsutil file createnew test5 10737418240
-#             - fsutil file createnew test6 10737418240
-#             - fsutil file createnew test7 10737418240
-#             - fsutil file createnew test8 10737418240
-#             - get-childitem $res_test1234_resourcePath
-#             - fsutil file createnew test9 10737418240
-#             - get-childitem $res_test1234_resourcePath
-#             - fsutil file createnew test10 10737418240
+#             - fallocate -l 10G huge_file.dat
+#             - fallocate -l 10G huge_file.dat1
+#             - fallocate -l 10G huge_file.dat2
+#             - fallocate -l 10G huge_file.dat3
+#             - fallocate -l 10G huge_file.dat4
+#             - fallocate -l 10G huge_file.dat5
+#             - fallocate -l 10G huge_file.dat6
+#             - fallocate -l 10G huge_file.dat7
+#             - fallocate -l 10G huge_file.dat8
+#             - fallocate -l 10G huge_file.dat9
+            - get-childitem $res_test1234_resourcePath
+            - fsutil file createnew test1 10737418240
+            - fsutil file createnew test2 10737418240
+            - fsutil file createnew test3 10737418240
+            - fsutil file createnew test4 10737418240
+            - fsutil file createnew test5 10737418240
+            - get-childitem $res_test1234_resourcePath
+            - fsutil file createnew test6 10737418240
+            - fsutil file createnew test7 10737418240
+            - fsutil file createnew test8 10737418240
+            - get-childitem $res_test1234_resourcePath
+            - fsutil file createnew test9 10737418240
+            - get-childitem $res_test1234_resourcePath
+            - fsutil file createnew test10 10737418240
 #             - docker pull drydock/w16:master
 #             - docker pull drydock/w16dotnetcore:master
 #             - docker pull drydock/w16aspnetcore:master
