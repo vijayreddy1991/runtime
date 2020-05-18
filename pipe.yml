@@ -22,7 +22,7 @@ pipelines:
             - echo "executing step..."
             - df -h
             - docker images
-            - sudo docker rmi f4b00d59cd71
+#             - sudo docker rmi f4b00d59cd71
             - cd /opt
             - pwd
             - docker images
