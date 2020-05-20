@@ -50,6 +50,7 @@ pipelines:
             - fsutil file createnew test3 10737418240
             - fsutil file createnew test4 10737418240
             - fsutil file createnew test5 10737418240
+            - df -h
             - Write-Host ("{0}GB total" -f [math]::truncate($disk.Size / 1GB))
             - Write-Host ("{0}GB free" -f [math]::truncate($disk.FreeSpace / 1GB))
 #             - get-childitem $res_test1234_resourcePath
