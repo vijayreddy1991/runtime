@@ -1,4 +1,5 @@
 resources:
+
   - name: git_test_100
     type: GitRepo
     configuration:
