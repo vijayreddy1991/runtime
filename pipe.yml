@@ -12,49 +12,48 @@ pipelines:
   - name: pipelines
     steps:
       - name: S_vijaykumar
-        type: PowerShell
+        type: Bash #PowerShell
         configuration: 
-          nodePool: win_2019    
+          nodePool: vijay    
           inputResources:
             - name: test1234
-          runtime:
-            type: host
+
          
         execution:
           onExecute:
-#             - echo "executing step..."
-#             - df -h
-#             - docker images
-# #             - sudo docker rmi f4b00d59cd71
-#             - cd /opt
-#             - pwd
-#             - docker images
-#             - df -h
-#             - fallocate -l 10G huge_file.dat
-#             - df -h
-#             - fallocate -l 10G huge_file.dat1
-#             - df -h
-#             - fallocate -l 10G huge_file.dat2
-#             - df -h
-#             - fallocate -l 1G huge_file.dat3
-#             - df -h
-#             - fallocate -l 5G huge_file.dat4
-#             - df -h
-#             - fallocate -l 1G huge_file.dat5
-#             - fallocate -l 1G huge_file.dat6
-#             - fallocate -l 1G huge_file.dat7
-#             - df -h
-#             - fallocate -l 1G huge_file.dat8
-#             - df -h
-#             - fallocate -l 1G huge_file.dat9
-            - get-childitem $res_test1234_resourcePath
-            - fsutil file createnew test1 10737418240
-            - fsutil file createnew test2 10737418240
-            - fsutil file createnew test3 10737418240
-            - fsutil file createnew test4 10737418240
-            - fsutil file createnew test5 10737418240
+            - echo "executing step..."
             - df -h
-            - Write-Host ("{0}GB total" -f [math]::truncate($disk.Size / 1GB))
+            - docker images
+#             - sudo docker rmi f4b00d59cd71
+            - cd /opt
+            - pwd
+            - docker images
+            - df -h
+            - fallocate -l 10G huge_file.dat
+            - df -h
+            - fallocate -l 10G huge_file.dat1
+            - df -h
+            - fallocate -l 10G huge_file.dat2
+            - df -h
+            - fallocate -l 1G huge_file.dat3
+            - df -h
+            - fallocate -l 5G huge_file.dat4
+            - df -h
+            - fallocate -l 1G huge_file.dat5
+            - fallocate -l 1G huge_file.dat6
+            - fallocate -l 1G huge_file.dat7
+            - df -h
+            - fallocate -l 1G huge_file.dat8
+            - df -h
+            - fallocate -l 1G huge_file.dat9
+#             - get-childitem $res_test1234_resourcePath
+#             - fsutil file createnew test1 10737418240
+#             - fsutil file createnew test2 10737418240
+#             - fsutil file createnew test3 10737418240
+#             - fsutil file createnew test4 10737418240
+#             - fsutil file createnew test5 10737418240
+#             - df -h
+#             - Write-Host ("{0}GB total" -f [math]::truncate($disk.Size / 1GB))
             - Write-Host ("{0}GB free" -f [math]::truncate($disk.FreeSpace / 1GB))
 #             - get-childitem $res_test1234_resourcePath
 #             - fsutil file createnew test6 10737418240
