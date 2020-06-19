@@ -11,572 +11,571 @@ pipelines:
       - name: step1
         type: Bash
         configuration:  
-#           nodePool: vijay_win_2019        
+          nodePool: vijay       
           inputResources:
             - name: git_test_100
         execution:
           onExecute:
             - echo "executing step..."
-            - ghkghkgkhgi
             
-      - name: step2
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step1          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step2
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step1          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step3
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step2          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step3
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step2          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step4
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step3          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step4
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step3          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step5
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step4          
-        execution:
-          onExecute:
-            - echo "executing step..."      
+#       - name: step5
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step4          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."      
             
-      - name: step6
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step5          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step6
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step5          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step7
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step6          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step7
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step6          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step8
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step7          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step8
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step7          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step9
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step8          
-        execution:
-          onExecute:
-            - echo "executing step..."  
+#       - name: step9
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step8          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."  
             
-      - name: step10
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step9          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step10
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step9          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step11
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step10          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step11
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step10          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step12
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step11          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step12
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step11          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step13
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step12          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step13
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step12          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step14
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step13          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step14
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step13          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step15
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step14          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step15
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step14          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step16
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step15          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step16
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step15          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step17
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step16          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step17
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step16          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step18
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step17          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step18
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step17          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step19
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step18          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step19
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step18          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step20
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step19          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step20
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step19          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step21
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step20          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step21
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step20          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step22
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step21          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step22
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step21          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step23
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step22          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step23
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step22          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step24
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step23          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step24
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step23          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step25
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step24          
-        execution:
-          onExecute:
-            - echo "executing step..."      
+#       - name: step25
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step24          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."      
             
-      - name: step26
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step25          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step26
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step25          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step27
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step26          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step27
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step26          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step28
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step27          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step28
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step27          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step29
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step28          
-        execution:
-          onExecute:
-            - echo "executing step..."  
+#       - name: step29
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step28          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."  
             
-      - name: step30
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step29          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step30
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step29          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step31
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step30          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step31
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step30          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step32
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step31          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step32
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step31          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step33
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step32          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step33
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step32          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step34
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step33          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step34
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step33          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step35
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step34          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step35
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step34          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step36
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step35          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step36
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step35          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step37
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step36          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step37
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step36          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step38
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step37          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step38
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step37          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step39
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step38          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step39
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step38          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step40
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step39          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step40
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step39          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step41
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step40          
-        execution:
-          onExecute:
-            - echo "executing step..."     
+#       - name: step41
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step40          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."     
             
-      - name: step42
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step41          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step42
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step41          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step43
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step42          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step43
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step42          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step44
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step43          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step44
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step43          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step45
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step44          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step45
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step44          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step46
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step45          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step46
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step45          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step47
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step46          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step47
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step46          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step48
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step47          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step48
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step47          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step49
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step48          
-        execution:
-          onExecute:
-            - echo "executing step..."   
+#       - name: step49
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step48          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."   
             
-      - name: step50
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step49          
-        execution:
-          onExecute:
-            - echo "executing step..."    
+#       - name: step50
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step49          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."    
             
-      - name: step51
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step50          
-        execution:
-          onExecute:
-            - echo "executing step..."  
+#       - name: step51
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step50          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."  
             
-      - name: step52
-        type: Bash
-        configuration:        
-          inputResources:
-            - name: git_test_100
-          inputSteps:
-            - name: step51          
-        execution:
-          onExecute:
-            - echo "executing step..."           
+#       - name: step52
+#         type: Bash
+#         configuration:        
+#           inputResources:
+#             - name: git_test_100
+#           inputSteps:
+#             - name: step51          
+#         execution:
+#           onExecute:
+#             - echo "executing step..."           
             
