@@ -18,16 +18,16 @@ pipelines:
           onExecute:
             - echo "executing step..."
             
-#       - name: step2
-#         type: Bash
-#         configuration:        
-#           inputResources:
-#             - name: git_test_100
+      - name: step2
+        type: Bash
+        configuration:        
+          inputResources:
+            - name: git_test_100
 #           inputSteps:
 #             - name: step1          
-#         execution:
-#           onExecute:
-#             - echo "executing step..."    
+        execution:
+          onExecute:
+            - echo "executing step..."    
             
 #       - name: step3
 #         type: Bash
