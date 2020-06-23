@@ -40,6 +40,10 @@ pipelines:
             - fallocate -l 5G huge_file.dat4
             - df -h
             - fallocate -l 1G huge_file.dat5
+            - fallocate -l 5G huge_file.dat11
+            - df -h
+            - fallocate -l 1G huge_file.dat12
+            - df -h
             - fallocate -l 1G huge_file.dat6
             - fallocate -l 1G huge_file.dat7
             - df -h
@@ -54,7 +58,7 @@ pipelines:
 #             - fsutil file createnew test5 10737418240
 #             - df -h
 #             - Write-Host ("{0}GB total" -f [math]::truncate($disk.Size / 1GB))
-            - Write-Host ("{0}GB free" -f [math]::truncate($disk.FreeSpace / 1GB))
+#             - Write-Host ("{0}GB free" -f [math]::truncate($disk.FreeSpace / 1GB))
 #             - get-childitem $res_test1234_resourcePath
 #             - fsutil file createnew test6 10737418240
 #             - fsutil file createnew test7 10737418240
