@@ -31,25 +31,25 @@ pipelines:
             - df -h
             - fallocate -l 10G huge_file.dat
             - df -h
-            - fallocate -l 10G huge_file.dat1
-            - df -h
-            - fallocate -l 10G huge_file.dat2
-            - fallocate -l 10G huge_file.dat13
-            - df -h
-            - fallocate -l 1G huge_file.dat3
-            - df -h
-            - fallocate -l 5G huge_file.dat4
-            - df -h
-            - fallocate -l 1G huge_file.dat5
-            - fallocate -l 5G huge_file.dat11
-            - df -h
-            - fallocate -l 1G huge_file.dat12
-            - df -h
-            - fallocate -l 1G huge_file.dat6
-            - fallocate -l 1G huge_file.dat7
-            - df -h
-            - fallocate -l 1G huge_file.dat8
-            - df -h
+#             - fallocate -l 10G huge_file.dat1
+#             - df -h
+#             - fallocate -l 10G huge_file.dat2
+#             - fallocate -l 10G huge_file.dat13
+#             - df -h
+#             - fallocate -l 1G huge_file.dat3
+#             - df -h
+#             - fallocate -l 5G huge_file.dat4
+#             - df -h
+#             - fallocate -l 1G huge_file.dat5
+#             - fallocate -l 5G huge_file.dat11
+#             - df -h
+#             - fallocate -l 1G huge_file.dat12
+#             - df -h
+#             - fallocate -l 1G huge_file.dat6
+#             - fallocate -l 1G huge_file.dat7
+#             - df -h
+#             - fallocate -l 1G huge_file.dat8
+#             - df -h
             - fallocate -l 1G huge_file.dat9
 #             - get-childitem $res_test1234_resourcePath
 #             - fsutil file createnew test1 10737418240
@@ -75,27 +75,27 @@ pipelines:
 #             - docker pull mcr.microsoft.com/windows/servercore:ltsc2019
 #             - docker pull mcr.microsoft.com/windows/nanoserver:ltsc2019
 #             - docker pull mcr.microsoft.com/windows/iotcore:ltsc2019
-#             - docker pull drydock/u16all:master
-#             - docker pull drydock/u16javall:master
-#             - docker pull drydock/u16phpall:master
-#             - docker pull drydock/u16scaall:master
-#             - docker pull drydock/u16nodall:master
-#             - docker pull drydock/u14:master
-#             - docker pull drydock/u14all:master
-#             - docker pull drydock/u14javall:master
-#             - docker pull drydock/u14phpall:master
-#             - docker pull drydock/u14scaall:master
-#             - docker pull drydock/u14nodall:master
-#             - docker pull drydock/c7:master
-#             - docker pull drydock/u14all:master
-#             - docker pull drydock/c7all:master
-#             - docker pull drydock/c7javall:master
-#             - docker pull drydock/c7phpall:master
-#             - docker pull drydock/c7scaall:master
-#             - docker pull drydock/c7nodall:master
-#             - docker pull drydock/u18node:master
-#             - docker pull drydock/u16node:master
-#             - docker pull ubuntu
+            - docker pull drydock/u16all:master
+            - docker pull drydock/u16javall:master
+            - docker pull drydock/u16phpall:master
+            - docker pull drydock/u16scaall:master
+            - docker pull drydock/u16nodall:master
+            - docker pull drydock/u14:master
+            - docker pull drydock/u14all:master
+            - docker pull drydock/u14javall:master
+            - docker pull drydock/u14phpall:master
+            - docker pull drydock/u14scaall:master
+            - docker pull drydock/u14nodall:master
+            - docker pull drydock/c7:master
+            - docker pull drydock/u14all:master
+            - docker pull drydock/c7all:master
+            - docker pull drydock/c7javall:master
+            - docker pull drydock/c7phpall:master
+            - docker pull drydock/c7scaall:master
+            - docker pull drydock/c7nodall:master
+            - docker pull drydock/u18node:master
+            - docker pull drydock/u16node:master
+            - docker pull ubuntu
           onSuccess:
             - echo "Job well done!"
             - rm -rf huge_file.dat huge_file.dat1 huge_file.dat2 huge_file.dat3 huge_file.dat4 huge_file.dat5 huge_file.dat6 huge_file.dat7 huge_file.dat8 huge_file.dat9
