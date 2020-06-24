@@ -95,7 +95,7 @@ pipelines:
 #             - docker pull drydock/c7nodall:master
 #             - docker pull drydock/u18node:master
 #             - docker pull drydock/u16node:master
-            - docker pull ubuntu
+#             - docker pull ubuntu
             - git --version
             - python --version
             - node --version
