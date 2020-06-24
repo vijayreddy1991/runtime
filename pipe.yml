@@ -112,7 +112,7 @@ pipelines:
             - choco list
             - choco --version
             - virtualenv --version
-            - pyopenssl --version
+#             - pyopenssl --version
             - helm version --client          
           onSuccess:
             - echo "Job well done!"
