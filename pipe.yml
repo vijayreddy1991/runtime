@@ -98,9 +98,9 @@ pipelines:
 #             - docker pull ubuntu
             - git --version
             - python --version
-            - node --version
-            - git lfs version
-            - ruby --version
+#             - node --version
+#             - git lfs version
+#             - ruby --version
             - gcloud version
             - aws --version
             - az --version
@@ -109,11 +109,11 @@ pipelines:
             - packer --version
             - jq --version
             - kubectl version --client
-            - docker --version
-            - java --version
             - choco list
             - choco --version
-            - npm --version            
+            - Virtualenv --version
+            - pyOpenSSL --version
+            - helm --version           
           onSuccess:
             - echo "Job well done!"
             - rm -rf huge_file.dat huge_file.dat1 huge_file.dat2 huge_file.dat3 huge_file.dat4 huge_file.dat5 huge_file.dat6 huge_file.dat7 huge_file.dat8 huge_file.dat9
