@@ -14,7 +14,7 @@ pipelines:
       - name: S_vijaykumar
         type: PowerShell
         configuration: 
-#           nodePool: vijay    
+          nodePool: win_2019   
           inputResources:
             - name: test1234
 
@@ -51,19 +51,19 @@ pipelines:
 #             - fallocate -l 1G huge_file.dat8
 #             - df -h
 #             - fallocate -l 1G huge_file.dat9
-            - get-childitem $res_test1234_resourcePath
-            - fsutil file createnew test1 10737418240
-            - fsutil file createnew test2 10737418240
-            - fsutil file createnew test3 10737418240
-            - fsutil file createnew test4 10737418240
-            - fsutil file createnew test5 10737418240
-            - df -h
-            - Write-Host ("{0}GB total" -f [math]::truncate($disk.Size / 1GB))
-            - Write-Host ("{0}GB free" -f [math]::truncate($disk.FreeSpace / 1GB))
-            - get-childitem $res_test1234_resourcePath
-            - fsutil file createnew test6 10737418240
-            - fsutil file createnew test7 10737418240
-            - fsutil file createnew test8 10737418240
+#             - get-childitem $res_test1234_resourcePath
+#             - fsutil file createnew test1 10737418240
+#             - fsutil file createnew test2 10737418240
+#             - fsutil file createnew test3 10737418240
+#             - fsutil file createnew test4 10737418240
+#             - fsutil file createnew test5 10737418240
+#             - df -h
+#             - Write-Host ("{0}GB total" -f [math]::truncate($disk.Size / 1GB))
+#             - Write-Host ("{0}GB free" -f [math]::truncate($disk.FreeSpace / 1GB))
+#             - get-childitem $res_test1234_resourcePath
+#             - fsutil file createnew test6 10737418240
+#             - fsutil file createnew test7 10737418240
+#             - fsutil file createnew test8 10737418240
 #             - get-childitem $res_test1234_resourcePath
 #             - fsutil file createnew test9 10737418240
 #             - get-childitem $res_test1234_resourcePath
@@ -75,27 +75,45 @@ pipelines:
 #             - docker pull mcr.microsoft.com/windows/servercore:ltsc2019
 #             - docker pull mcr.microsoft.com/windows/nanoserver:ltsc2019
 #             - docker pull mcr.microsoft.com/windows/iotcore:ltsc2019
-            - docker pull drydock/u16all:master
-            - docker pull drydock/u16javall:master
-            - docker pull drydock/u16phpall:master
-            - docker pull drydock/u16scaall:master
-            - docker pull drydock/u16nodall:master
-            - docker pull drydock/u14:master
-            - docker pull drydock/u14all:master
-            - docker pull drydock/u14javall:master
-            - docker pull drydock/u14phpall:master
-            - docker pull drydock/u14scaall:master
-            - docker pull drydock/u14nodall:master
-            - docker pull drydock/c7:master
-            - docker pull drydock/u14all:master
-            - docker pull drydock/c7all:master
-            - docker pull drydock/c7javall:master
-            - docker pull drydock/c7phpall:master
-            - docker pull drydock/c7scaall:master
-            - docker pull drydock/c7nodall:master
-            - docker pull drydock/u18node:master
-            - docker pull drydock/u16node:master
+#             - docker pull drydock/u16all:master
+#             - docker pull drydock/u16javall:master
+#             - docker pull drydock/u16phpall:master
+#             - docker pull drydock/u16scaall:master
+#             - docker pull drydock/u16nodall:master
+#             - docker pull drydock/u14:master
+#             - docker pull drydock/u14all:master
+#             - docker pull drydock/u14javall:master
+#             - docker pull drydock/u14phpall:master
+#             - docker pull drydock/u14scaall:master
+#             - docker pull drydock/u14nodall:master
+#             - docker pull drydock/c7:master
+#             - docker pull drydock/u14all:master
+#             - docker pull drydock/c7all:master
+#             - docker pull drydock/c7javall:master
+#             - docker pull drydock/c7phpall:master
+#             - docker pull drydock/c7scaall:master
+#             - docker pull drydock/c7nodall:master
+#             - docker pull drydock/u18node:master
+#             - docker pull drydock/u16node:master
             - docker pull ubuntu
+            - git --version
+            - python --version
+            - node --version
+            - git lfs version
+            - ruby --version
+            - gcloud version
+            - aws --version
+            - az --version
+            - jfrog --version
+            - terraform -version
+            - packer --version
+            - jq --version
+            - kubectl version --client
+            - docker --version
+            - java --version
+            - choco list
+            - choco --version
+            - npm --version            
           onSuccess:
             - echo "Job well done!"
             - rm -rf huge_file.dat huge_file.dat1 huge_file.dat2 huge_file.dat3 huge_file.dat4 huge_file.dat5 huge_file.dat6 huge_file.dat7 huge_file.dat8 huge_file.dat9
