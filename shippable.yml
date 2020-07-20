@@ -24,33 +24,33 @@ pipelines:
           nodePool: vijay          
           inputResources:
             - name: git_test_100
-#           inputSteps:
-#             - name: step1          
+          inputSteps:
+            - name: step1          
         execution:
           onExecute:
             - echo "executing step..."    
             
-#       - name: step3
-#         type: Bash
-#         configuration:        
-#           inputResources:
-#             - name: git_test_100
-#           inputSteps:
-#             - name: step2          
-#         execution:
-#           onExecute:
-#             - echo "executing step..."   
+      - name: step3
+        type: Bash
+        configuration:        
+          inputResources:
+            - name: git_test_100
+          inputSteps:
+            - name: step2          
+        execution:
+          onExecute:
+            - echo "executing step..."   
             
-#       - name: step4
-#         type: Bash
-#         configuration:        
-#           inputResources:
-#             - name: git_test_100
-#           inputSteps:
-#             - name: step3          
-#         execution:
-#           onExecute:
-#             - echo "executing step..."    
+      - name: step4
+        type: Bash
+        configuration:        
+          inputResources:
+            - name: git_test_100
+          inputSteps:
+            - name: step3          
+        execution:
+          onExecute:
+            - echo "executing step..."    
             
 #       - name: step5
 #         type: Bash
