@@ -24,8 +24,8 @@ pipelines:
         type: Bash
         configuration: 
           inputResources:
-            - name: git_vijay
-            - name: git_vijaykp
+            - name: git_repo
+            - name: git_repo1
         execution:
           onExecute:
             - echo "executing step..."
