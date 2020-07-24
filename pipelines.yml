@@ -13,8 +13,7 @@ resources:
     configuration:
       gitProvider: vijay
       path: vijayreddy1991/runtime
-      branches:
-        include: master        
+      branches:     
       files:  # optional
         include: ^pipe.yml$  
 
