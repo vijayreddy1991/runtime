@@ -1,6 +1,6 @@
 
 resources:
-  - name: git_vijay
+  - name: git_repo
     type: GitRepo
     configuration:
       gitProvider: vijay
@@ -8,7 +8,7 @@ resources:
       branches:
         include: master      
         
-  - name: git_vijaykp
+  - name: git_repo1
     type: GitRepo
     configuration:
       gitProvider: vijay
