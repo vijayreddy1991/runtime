@@ -14,7 +14,9 @@ resources:
       gitProvider: vijay
       path: vijayreddy1991/runtime
       branches:     
-        include: ^pipe.yml$  
+        include: master
+      files:  # optional
+        include: ^pipe.yml$         
 
 pipelines:
   - name: pipelines
