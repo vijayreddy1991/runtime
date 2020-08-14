@@ -23,8 +23,9 @@ pipelines:
       - name: S_Bash1
         type: Bash
         configuration: 
-          inputResources:
+          inputResources:          
             - name: git_repo
+              trigger: false              
 #             - name: git_repo1
         execution:
           onExecute:
