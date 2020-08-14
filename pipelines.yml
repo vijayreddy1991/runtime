@@ -8,15 +8,15 @@ resources:
       branches:
         include: master      
         
-  - name: git_repo1
-    type: GitRepo
-    configuration:
-      gitProvider: vijay
-      path: vijayreddy1991/runtime
-      branches:     
-        include: master
-      files:  # optional
-        include: ^pipe.yml$         
+#   - name: git_repo1
+#     type: GitRepo
+#     configuration:
+#       gitProvider: vijay
+#       path: vijayreddy1991/runtime
+#       branches:     
+#         include: master
+#       files:  # optional
+#         include: ^pipe.yml$         
 
 pipelines:
   - name: pipelines
@@ -26,7 +26,7 @@ pipelines:
         configuration: 
           inputResources:
             - name: git_repo
-            - name: git_repo1
+#             - name: git_repo1
         execution:
           onExecute:
             - echo "executing step..."
