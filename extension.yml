@@ -819,8 +819,8 @@
 #   #     targets:
 #   #       - 1.2.3.6
 pipelines:
-#   - name: extensionstest
-#     steps:
+  - name: extensionstest
+    steps:
 #       - name: step100
 #         type: gitcheck/gitstep
 #         syntaxVersion: latest
