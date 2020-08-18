@@ -1277,7 +1277,7 @@ pipelines:
 # #             - printenv
 
       - name: retiredcheck
-        type: templates1/gitstep
+        type: gitdoublecheck/gitstep2
         configuration:              
           foo: bar
 #           inputResources:
