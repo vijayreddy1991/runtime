@@ -818,7 +818,7 @@
 #   #     sshKey: SSH
 #   #     targets:
 #   #       - 1.2.3.6
-# pipelines:
+pipelines:
 #   - name: extensionstest
 #     steps:
 #       - name: step100
