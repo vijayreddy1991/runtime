@@ -1,52 +1,52 @@
 resources:
-  - name: git_test_100
+  - name: vijay_git
     type: GitRepo
     configuration:
       gitProvider: vijay
       path: vijayreddy1991/runtime
 
 pipelines:
-  - name: pipelines_100_conections
+  - name: vijay_pipelines
     steps:
-      - name: step1
+      - name: vijay_step1
         type: Bash
         configuration:  
           nodePool: vijay       
           inputResources:
-            - name: git_test_100
+            - name: vijay_git
         execution:
           onExecute:
             - echo "executing step..."
             - sleep 60
             
-      - name: step2
+      - name: vijay_step2
         type: Bash
         configuration: 
           nodePool: vijay          
           inputResources:
-            - name: git_test_100
+            - name: vijay_git
           inputSteps:
-            - name: step1          
+            - name: vijay_step1          
         execution:
           onExecute:
             - echo "executing step..."    
             
-      - name: step3
+      - name: vijay_step3
         type: Bash
         configuration:  
           nodePool: vijay           
           inputResources:
-            - name: git_test_100      
+            - name: vijay_git      
         execution:
           onExecute:
             - echo "executing step..."   
             
-      - name: step4
+      - name: vijay_step4
         type: Bash
         configuration:    
           nodePool: vijay         
           inputResources:
-            - name: git_test_100   
+            - name: vijay_git   
         execution:
           onExecute:
             - echo "executing step..."    
