@@ -1,0 +1,8 @@
+pipelines:
+  - name: pipeline_automation
+    steps:
+      - name: api_pipeline
+        type: PowerShell
+        execution:
+          onExecute:
+            - write-output "hi"
