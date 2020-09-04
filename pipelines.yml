@@ -32,6 +32,9 @@ pipelines:
             - echo "executing step..."
             - printenv
             
-            
+         
+         
+         
+         
                     
             
