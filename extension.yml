@@ -1,10 +1,10 @@
 resources:
   - name: step001
     type: Gitnp/gittest1
-    syntaxVersion: 1.0.11
+    syntaxVersion: latest
     configuration:      
       test: foo
-      bdood: "present2"
+      bdood: "present3"
       
       
 pipelines:
