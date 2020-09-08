@@ -1,7 +1,7 @@
 resources:
   - name: step001
     type: Gitnp/gittest1
-    syntaxVersion: lat
+    syntaxVersion: latest
     configuration:      
       test: foo
       bdood: "present"
