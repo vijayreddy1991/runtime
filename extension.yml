@@ -3,7 +3,7 @@ resources:
     type: Gitnp/gittest1
     syntaxVersion: latest
     configuration:      
-      test: foo
+      test: bar
       bdood: "present"
       
       
