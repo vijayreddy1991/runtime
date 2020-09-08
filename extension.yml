@@ -4,7 +4,7 @@ resources:
     syntaxVersion: latest
     configuration:      
       test: foo
-      bdood: "present"
+      bdood: "present1"
       
       
 pipelines:
