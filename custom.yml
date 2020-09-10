@@ -16,6 +16,7 @@ resources:
       files:
         include: ^b\/.*$
         
+        
   - name: vijay_test_gitrepo_c
     type: GitRepo
     configuration:
@@ -24,7 +25,9 @@ resources:
       branches:
         include: test
       files:
-        include: ^b\/.*$        
+        include: batch    
+      buildOn:  # optional
+        commit: true
 pipelines:
   - name: vijay_custom_test
     steps:
@@ -46,6 +49,7 @@ pipelines:
             - name: build_a
           inputResources:
             - name: vijay_test_gitrepo_c
+              trigger: true            
   
         execution:
           onExecute:
