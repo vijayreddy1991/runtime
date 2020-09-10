@@ -40,4 +40,4 @@ pipelines:
             - cd $res_vijay_test_gitrepo_b_resourcePath
             - cat b/test.txt
             - git rev-parse --short HEAD
-            - printenv | grep res_pipe_3182_test_gitrepo_b
+            - printenv | grep res_vijay_test_gitrepo_b
