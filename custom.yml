@@ -27,7 +27,7 @@ pipelines:
           onExecute:
             - cd $res_vijay_test_gitrepo_a_resourcePath
             - echo "test" >> test.txt
-            - cat a/test.txt
+            - cat test.txt
             - git rev-parse --short HEAD
       - name: build_b
         type: Bash
@@ -40,6 +40,6 @@ pipelines:
           onExecute:
             - cd $res_vijay_test_gitrepo_b_resourcePath
             - echo "test" >> test.txt
-            - cat b/test.txt
+            - cat test.txt
             - git rev-parse --short HEAD
             - printenv | grep res_vijay_test_gitrepo_b
