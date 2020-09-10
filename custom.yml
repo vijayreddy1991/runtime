@@ -15,6 +15,16 @@ resources:
         include: test
       files:
         include: ^b\/.*$
+        
+  - name: vijay_test_gitrepo_c
+    type: GitRepo
+    configuration:
+      path: vijayreddy1991/runtime
+      gitProvider: vijay
+      branches:
+        include: test
+      files:
+        include: ^b\/.*$        
 pipelines:
   - name: vijay_custom_test
     steps:
@@ -35,7 +45,8 @@ pipelines:
           inputSteps:
             - name: build_a
           inputResources:
-            - name: vijay_test_gitrepo_b
+            - name: vijay_test_gitrepo_c
+  
         execution:
           onExecute:
             - cd $res_vijay_test_gitrepo_b_resourcePath
