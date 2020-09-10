@@ -12,7 +12,7 @@ resources:
       path: vijayreddy1991/runtime
       gitProvider: vijay
       branches:
-        include: '^{{gitBranch}}$'
+        include: test
       files:
         include: ^b\/.*$
 pipelines:
