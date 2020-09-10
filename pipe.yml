@@ -11,7 +11,7 @@ pipelines:
   - name: pipelines
     steps:
       - name: S_vijaykumar
-        type: PowerShell
+        type: Bash
         configuration: 
           nodePool: vijay    
           inputResources:
