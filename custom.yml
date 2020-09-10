@@ -1,0 +1,43 @@
+resources:
+  - name: vijay_test_gitrepo_a
+    type: GitRepo
+    configuration:
+      path: vijayreddy1991/runtime
+      gitProvider: vijay
+      branches:
+        include: '^{{gitBranch}}$'
+  - name: vijay_test_gitrepo_b
+    type: GitRepo
+    configuration:
+      path: vijayreddy1991/runtime
+      gitProvider: vijay
+      branches:
+        include: '^{{gitBranch}}$'
+      files:
+        include: ^b\/.*$
+pipelines:
+  - name: vijay_custom_test
+    steps:
+      - name: build_a
+        type: Bash
+        configuration:
+          inputResources:
+            - name: vijay_test_gitrepo_a
+        execution:
+          onExecute:
+            - cd $res_vijay_test_gitrepo_a_resourcePath
+            - cat a/test.txt
+            - git rev-parse --short HEAD
+      - name: build_b
+        type: Bash
+        configuration:
+          inputSteps:
+            - name: build_a
+          inputResources:
+            - name: vijay_test_gitrepo_b
+        execution:
+          onExecute:
+            - cd $res_vijay_test_gitrepo_b_resourcePath
+            - cat b/test.txt
+            - git rev-parse --short HEAD
+            - printenv | grep res_pipe_3182_test_gitrepo_b
