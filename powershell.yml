@@ -1,3 +1,11 @@
+resources:
+      
+  - name: myRepo
+    type: GitRepo
+    configuration:
+      gitProvider: vijay
+      path: vijayreddy1991/powershell
+
 pipelines:
   - name: pipeline_automation
     steps:
@@ -6,3 +14,4 @@ pipelines:
         execution:
           onExecute:
             - write-output "hi"
+            - buildDir=$(find_resource_variable $inputGitRepoResourceName resourcePath)
