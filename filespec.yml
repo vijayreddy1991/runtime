@@ -1,0 +1,19 @@
+  - name: r_FileSpec_aql
+    type: FileSpec
+    configuration:
+      sourceArtifactory: art_v
+      aql: items.find({"stat.downloads":{"$eq":null}})
+      
+
+pipelines:
+  - name: pipelines_r_FileSpec
+
+      - name: Bash_FileSpec_Input
+        type: Bash
+        configuration:
+          inputResources:
+            - name: r_FileSpec_aql
+
+        execution:
+          onExecute:
+            - echo "executing step..."
