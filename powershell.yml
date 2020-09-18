@@ -19,6 +19,10 @@ pipelines:
           onExecute:
             - write-output "hi"
             - Get-Variable | format-table
+            - write-output "$step_configuration_inputResource"
+            - write-output "$step_configuration_inputResources"
             - write-output "$vijayRepo"
             - Push-Location $res_vijayRepo_resourcePath
             - $buildDir = find_resource_variable vijayRepo $res_vijayRepo_resourcePath
+            - buildDir = $(find_resource_variable $inputGitRepoResourceName vijayRepo)
+ 
