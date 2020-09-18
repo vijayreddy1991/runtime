@@ -11,6 +11,8 @@ pipelines:
     steps:
       - name: api_pipeline
         type: PowerShell
+        configuration:
+            nodePool: windows-static
         execution:
           onExecute:
             - write-output "hi"
