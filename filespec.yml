@@ -7,7 +7,7 @@
 
 pipelines:
   - name: pipelines_r_FileSpec
-
+    steps:
       - name: Bash_FileSpec_Input
         type: Bash
         configuration:
