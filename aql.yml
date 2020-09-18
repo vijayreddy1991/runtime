@@ -66,4 +66,4 @@ pipelines:
             - |
               [ ! -z "$res_S_Bash_0077_Aql_integrationAlias" ]
             - |
-              [ ! -z "$res_S_Bash_0077_Aql_resourceId" ]
+              [ ! -z "$res_S_Bash_0077_Aql_re" ]
