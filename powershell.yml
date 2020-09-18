@@ -21,4 +21,4 @@ pipelines:
             - Get-Variable | format-table
             - write-output "$vijayRepo"
             - Push-Location $res_vijayRepo_resourcePath
-            - $buildDir = find_resource_variable "$vijayRepo" inputGitRepoResourceName
+            - $buildDir = find_resource_variable "$vijayRepo" res_vijayRepo_masterName
