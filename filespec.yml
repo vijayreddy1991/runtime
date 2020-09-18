@@ -1,4 +1,6 @@
-  - name: r_FileSpec_aql
+resources: 
+ 
+ - name: r_FileSpec_aql
     type: FileSpec
     configuration:
       sourceArtifactory: art_v
