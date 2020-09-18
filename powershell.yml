@@ -12,7 +12,7 @@ pipelines:
       - name: api_pipeline
         type: PowerShell
         configuration:
-            nodePool: windows-static
+          nodePool: windows-static
           inputResources:
             - name: vijayRepo            
         execution:
