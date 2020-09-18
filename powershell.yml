@@ -18,4 +18,5 @@ pipelines:
         execution:
           onExecute:
             - write-output "hi"
-            - buildDir=$find_resource_variable vijayRepo $res_vijayRepo_resourcePath
+            - Push-Location $res_vijayRepo_resourcePath
+            - buildDir=find_resource_variable "$vijayRepo" inputGitRepoResourceName
