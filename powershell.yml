@@ -18,4 +18,4 @@ pipelines:
         execution:
           onExecute:
             - write-output "hi"
-            - buildDir=$(find_resource_variable $inputGitRepoResourceName resourcePath)
+            - buildDir=$(find_resource_variable vijayRepo $res_vijayRepo_resourcePath)
