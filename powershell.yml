@@ -1,6 +1,6 @@
 resources:
       
-  - name: myRepo
+  - name: vijayRepo
     type: GitRepo
     configuration:
       gitProvider: vijay
@@ -13,6 +13,8 @@ pipelines:
         type: PowerShell
         configuration:
             nodePool: windows-static
+          inputResources:
+            - name: vijayRepo            
         execution:
           onExecute:
             - write-output "hi"
