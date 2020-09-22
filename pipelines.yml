@@ -3,7 +3,7 @@ resources:
   - name: git_repo
     type: GitRepo
     configuration:
-      gitProvider: vijay1
+      gitProvider: vijay
       path: vijayreddy1991/runtime
       branches:     
         include: master      
