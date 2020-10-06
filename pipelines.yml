@@ -8,13 +8,13 @@ resources:
       branches:     
         include: master      
         
-  - name: git_repo1
-    type: GitRepo
-    configuration:
-      gitProvider: vijay
-      path: vijayreddy1991/runtime
-      branches:     
-        include: master
+#   - name: git_repo1
+#     type: GitRepo
+#     configuration:
+#       gitProvider: vijay
+#       path: vijayreddy1991/runtime
+#       branches:     
+#         include: master
 #       files:  # optional
 #         include: ^pipe.yml$         
 
