@@ -4,6 +4,12 @@ resources:
     configuration:
       gitProvider: vijay
       path: vijayreddy1991/runtime
+      
+  - name: git_test_100
+    type: GitRepo
+    configuration:
+      gitProvider: vijay
+      path: vijayreddy1991/runtime      
 
 pipelines:
   - name: vijay_pipelines
