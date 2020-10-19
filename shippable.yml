@@ -67,7 +67,7 @@ pipelines:
           inputResources:
             - name: git_test_100
           inputSteps:
-            - name: step4          
+            - name: vijay_step4          
         execution:
           onExecute:
             - echo "executing step..."      
