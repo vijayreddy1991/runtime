@@ -31,7 +31,6 @@ pipelines:
           onExecute:
             - echo "executing step..."
             - printenv    
-            - sleep 60
 
 
 
