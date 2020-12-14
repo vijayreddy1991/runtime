@@ -1,6 +1,6 @@
 
 resources:
-  - name: git_vijay
+  - name: git_vijay12
     type: GitRepo
     configuration:
       gitProvider: vijay
@@ -26,7 +26,7 @@ pipelines:
         configuration: 
           timeoutSeconds: 10         
           inputResources:
-            - name: git_vijay
+            - name: git_vijay12
 #             - name: git_vijaykp
         execution:
           onExecute:
