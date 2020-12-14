@@ -8,15 +8,15 @@ resources:
       branches:
         include: master      
         
-  - name: git_vijaykp
-    type: GitRepo
-    configuration:
-      gitProvider: vijay
-      path: vijayreddy1991/runtime
-      branches:
-        include: master        
-      files:  # optional
-        include: ^pipe.yml$  
+#   - name: git_vijaykp
+#     type: GitRepo
+#     configuration:
+#       gitProvider: vijay
+#       path: vijayreddy1991/runtime
+#       branches:
+#         include: master        
+#       files:  # optional
+#         include: ^pipe.yml$  
 
 pipelines:
   - name: pipelines
@@ -24,9 +24,10 @@ pipelines:
       - name: S_Bash1
         type: Bash
         configuration: 
+          timeoutSeconds: 10         
           inputResources:
             - name: git_vijay
-            - name: git_vijaykp
+#             - name: git_vijaykp
         execution:
           onExecute:
             - echo "executing step..."
