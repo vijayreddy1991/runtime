@@ -30,7 +30,8 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - printenv    
+            - printenv  
+            - sleep 300
 
       - name: S_Bash2
         type: Bash
