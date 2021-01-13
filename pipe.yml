@@ -13,9 +13,7 @@ pipelines:
         configuration: 
 #           nodePool: u16dynamic   
           inputResources:
-            - name: test1234
-
-         
+            - name: test1234 
         execution:
           onExecute:
             - echo "executing step..."
