@@ -116,11 +116,3 @@ pipelines:
 #             - write-output "variable123={{ something }"
 #             - write-output "testvariable2={{gitBranch}}"
 #             - $testvariable2  
-
-
-
-
-
-
-
-
