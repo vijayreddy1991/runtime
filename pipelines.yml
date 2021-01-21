@@ -38,8 +38,8 @@ pipelines:
         configuration: 
           inputResources:          
             - name: git_repo1
-          inputSteps:
-            - name: S_Bash1
+#           inputSteps:
+#             - name: S_Bash1
 
         execution:
           onExecute:
