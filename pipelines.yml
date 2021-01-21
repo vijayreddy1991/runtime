@@ -6,17 +6,7 @@ resources:
       gitProvider: vijay
       path: vijayreddy1991/runtime
       branches:     
-        include: master      
-        
-  - name: git_repo1
-    type: GitRepo
-    configuration:
-      gitProvider: vijay
-      path: vijayreddy1991/run
-      branches:     
-        include: master
-#       files:  # optional
-#         include: ^pipe.yml$         
+        include: master            
 
 pipelines:
   - name: pipelines_vijay
@@ -37,7 +27,7 @@ pipelines:
         type: Bash
         configuration: 
           inputResources:          
-            - name: git_repo1
+            - name: test_1234
 #           inputSteps:
 #             - name: S_Bash1
 
