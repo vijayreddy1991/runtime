@@ -38,6 +38,8 @@ pipelines:
             - echo "executing step..."    
             
       - name: vijay_step3
+      
+      
         type: Bash
         configuration:  
           nodePool: vijay           
