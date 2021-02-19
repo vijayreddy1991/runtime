@@ -1,6 +1,4 @@
 
-
-
 resources:
   - name: vijay_test_gitrepo_a
     type: GitRepo
