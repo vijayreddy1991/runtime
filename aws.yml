@@ -1,7 +1,7 @@
 pipelines:
-  - name: d_AWS_c8_language
+  - name: AWS_c8_language
     steps:
-      - name: d_AWS_c8_language
+      - name: AWS_c8_language
         type: Bash
         configuration:
           nodePool: c8dynamic
