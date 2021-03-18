@@ -1,4 +1,3 @@
-
 resources:
   - name: test_1234
     type: GitRepo
