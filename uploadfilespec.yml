@@ -10,7 +10,7 @@ pipelines:
           onExecute:
             - request='{"key":"powershell-generic-local", "rclass":"local", "packageType":"generic", "description":"This repo is a test repo used by test automation", "repoLayoutRef":"simple-default"}'
             - echo $request > request.json
-            - jfrog rt repo-delete simplecharts --quiet || true
+            - jfrog rt repo-delete powershell-generic-local --quiet || true
             - jfrog rt repo-create request.json
             - touch s_foo
             - touch pipeInfo.json
