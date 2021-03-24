@@ -1,0 +1,18 @@
+pipelines:
+  - name: pipelines_PS_Bash_FileSpec_Upload
+    steps:
+      - name: S_FileSpec_Upload
+        type: Bash
+        configuration:
+          integrations:
+            - name: s_artifactory
+        execution:
+          onExecute:
+            - request='{"key":"simplecharts", "rclass":"local", "packageType":"helm", "description":"This repo is a test repo used by test automation", "repoLayoutRef":"simple-default"}'
+            - echo $request > request.json
+            - jfrog rt repo-delete simplecharts --quiet || true
+            - jfrog rt repo-create request.json
+            - touch s_foo
+            - touch pipeInfo.json
+            - jfrog rt u s_foo example-repo-local/s_foo
+            - jfrog rt u pipeInfo.json example-repo-local/pipeInfo.json
