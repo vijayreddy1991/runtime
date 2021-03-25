@@ -10,7 +10,7 @@ resources:
     type: FileSpec
     configuration:
       sourceArtifactory: s_artifactory
-      pattern: "*/s_foo*"
+      pattern: "*/fileSpecPowerShell/s_foo*"
       limit: 1
       sortBy:
         - created
@@ -20,7 +20,7 @@ resources:
     type: FileSpec
     configuration:
       sourceArtifactory: s_artifactory
-      pattern: "*/s_foo*"
+      pattern: "*/fileSpecPowerShell/s_foo*"
       limit: 1
       excludePatterns:
         - "*/pipeInfo.json"
@@ -30,7 +30,7 @@ resources:
     type: FileSpec
     configuration:
       sourceArtifactory: s_artifactory
-      pattern: "*/s_foo*"
+      pattern: "*/fileSpecPowerShell/s_foo*"
       limit: 1
       exclusions:
         - "*/pipeInfo.json"
