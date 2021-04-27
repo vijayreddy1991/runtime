@@ -10,7 +10,7 @@ pipelines:
       - name: S_vijaykumar
         type: Bash
         configuration: 
-          nodePool: k8_u16dynamic  
+#           nodePool: k8_u16dynamic  
           inputResources:
             - name: test1234 
         execution:
