@@ -16,8 +16,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-
-#                - df -h
+            - df -h
             - docker images        
             - cd /opt
             - pwd
