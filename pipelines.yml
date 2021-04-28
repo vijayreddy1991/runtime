@@ -26,6 +26,7 @@ pipelines:
       - name: S_Bash2
         type: Bash
         configuration: 
+          nodePool: win_2019
           inputResources:          
             - name: test_1234
 #           inputSteps:
