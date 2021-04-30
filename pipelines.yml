@@ -29,9 +29,6 @@ pipelines:
           nodePool: win_2019
           inputResources:          
             - name: test_1234
-#           inputSteps:
-#             - name: S_Bash1
-
         execution:
           onExecute:
             - echo "executing step..."
@@ -42,15 +39,20 @@ pipelines:
         configuration: 
           inputResources:          
             - name: test_1234
-#           inputSteps:
-#             - name: S_Bash1
-
         execution:
           onExecute:
             - echo "executing step..."
             - printenv  
 
 
-
+      - name: S_Bash4
+        type: Bash
+        configuration: 
+          inputResources:          
+            - name: test_1234
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - printenv 
 
 
