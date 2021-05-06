@@ -1,4 +1,3 @@
-
 resources:
   - name: vijay_git
     type: GitRepo
