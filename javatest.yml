@@ -1,0 +1,22 @@
+pipelines:
+  - name: S_Bash
+    steps:
+      - name: S_Bash
+        type: Bash
+        configuration:
+          nodePool: c7dynamic
+          runtime:
+            type: image
+            image:
+              auto:
+                language: java
+                versions:
+                  - '11'
+        execution:
+          onExecute:
+            - docker images
+            - >
+              [[ "$step_image_name:$step_image_tag" ==
+              "docker.bintray.io/jfrog/pipelines-c7java:11" ]]
+            - |
+              [[ "$(java --version)" == *"$step_image_tag"* ]]
