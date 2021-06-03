@@ -18,6 +18,6 @@ pipelines:
             - docker images
             - >
               [[ "$step_image_name:$step_image_tag" ==
-              "docker.bintray.io/jfrog/pipelines-c7java:11" ]]
+              "releases-docker.jfrog.io/jfrog/pipelines-c7java:11" ]]
             - |
               [[ "$(java --version)" == *"$step_image_tag"* ]]
