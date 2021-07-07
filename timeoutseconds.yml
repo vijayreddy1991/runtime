@@ -1,0 +1,23 @@
+resources:
+  - name: test_1234
+    type: GitRepo
+    configuration:
+      gitProvider: vijay
+      path: vijayreddy1991/runtime
+      branches:     
+        include: master            
+
+pipelines:
+  - name: pipelines_vijay
+    steps:
+      - name: S_Bash1
+        type: Bash
+        configuration: 
+          timeoutSeconds: 7200
+          inputResources:          
+            - name: test_1234           
+
+        execution:
+          onExecute:
+            - echo "executing step..."
+            - printenv  
