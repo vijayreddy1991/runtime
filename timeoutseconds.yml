@@ -6,9 +6,7 @@ pipelines:
         type: Bash
         configuration: 
           timeoutSeconds: 7200
-          nodePool: nodetest         
-          inputResources:          
-            - name: test_1234           
+          nodePool: nodetest          
 
         execution:
           onExecute:
