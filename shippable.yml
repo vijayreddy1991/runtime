@@ -10,9 +10,6 @@ resources:
       gitProvider: vijay
       path: vijayreddy1991/runtime      
 
-
-
-
 pipelines:
   - name: vijay_pipelines
     steps:
