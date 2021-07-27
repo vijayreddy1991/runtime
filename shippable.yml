@@ -21,7 +21,7 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - sleep 360
+            - sleep 240
             
 #       - name: vijay_step2
 #         type: Bash
