@@ -14,8 +14,7 @@ pipelines:
     steps:
       - name: vijay_step1
         type: Bash
-        configuration:  
-          nodePool: vijay       
+        configuration:       
           inputResources:
             - name: vijay_git
         execution:
