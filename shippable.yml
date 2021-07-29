@@ -24,8 +24,7 @@ pipelines:
             
       - name: step2
         type: Bash
-        configuration: 
-          nodePool: vijay          
+        configuration:          
           inputResources:
             - name: vijay_git
           inputSteps:
@@ -36,8 +35,7 @@ pipelines:
             
       - name: step3
         type: Bash
-        configuration:  
-          nodePool: vijay           
+        configuration:         
           inputResources:
             - name: vijay_git      
           inputSteps:
@@ -48,8 +46,7 @@ pipelines:
             
       - name: step4
         type: Bash
-        configuration:    
-          nodePool: vijay         
+        configuration:           
           inputResources:
             - name: vijay_git 
           inputSteps:
