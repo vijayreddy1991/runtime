@@ -4,15 +4,15 @@ resources:
     configuration:
       gitProvider: vijay
       path: vijayreddy1991/runtime     
-  - name: git_test_100
-    type: GitRepo
-    configuration:
-      gitProvider: vijay
-      path: vijayreddy1991/runtime      
+#   - name: git_test_100
+#     type: GitRepo
+#     configuration:
+#       gitProvider: vijay
+#       path: vijayreddy1991/runtime      
 pipelines:
-  - name: vijay_pipelines
+  - name: connected_steps_pipelines
     steps:
-      - name: vijay_step1
+      - name: step1
         type: Bash
         configuration:       
           inputResources:
@@ -20,56 +20,54 @@ pipelines:
         execution:
           onExecute:
             - echo "executing step..."
-            - sleep 360
+#             - sleep 360
             
-#       - name: vijay_step2
-#         type: Bash
-#         configuration: 
-#           nodePool: vijay          
-#           inputResources:
-#             - name: vijay_git
-#           inputSteps:
-#             - name: vijay_step1          
-#         execution:
-#           onExecute:
-#             - echo "executing step..."    
+      - name: step2
+        type: Bash
+        configuration: 
+          nodePool: vijay          
+          inputResources:
+            - name: vijay_git
+          inputSteps:
+            - name: step1          
+        execution:
+          onExecute:
+            - echo "executing step..."    
             
-#       - name: vijay_step3
-      
-      
-#         type: Bash
-#         configuration:  
-#           nodePool: vijay           
-#           inputResources:
-#             - name: vijay_git      
-#           inputSteps:
-#             - name: vijay_step2             
-#         execution:
-#           onExecute:
-#             - echo "executing step..."   
+      - name: step3
+        type: Bash
+        configuration:  
+          nodePool: vijay           
+          inputResources:
+            - name: vijay_git      
+          inputSteps:
+            - name: step2             
+        execution:
+          onExecute:
+            - echo "executing step..."   
             
-#       - name: vijay_step4
-#         type: Bash
-#         configuration:    
-#           nodePool: vijay         
-#           inputResources:
-#             - name: vijay_git 
-#           inputSteps:
-#             - name: vijay_step3             
-#         execution:
-#           onExecute:
-#             - echo "executing step..."    
+      - name: step4
+        type: Bash
+        configuration:    
+          nodePool: vijay         
+          inputResources:
+            - name: vijay_git 
+          inputSteps:
+            - name: step3             
+        execution:
+          onExecute:
+            - echo "executing step..."    
             
-#       - name: step5
-#         type: Bash
-#         configuration:        
-#           inputResources:
-#             - name: git_test_100
-#           inputSteps:
-#             - name: vijay_step4          
-#         execution:
-#           onExecute:
-#             - echo "executing step..."      
+      - name: step5
+        type: Bash
+        configuration:        
+          inputResources:
+            - name: vijay_git
+          inputSteps:
+            - name: step4          
+        execution:
+          onExecute:
+            - echo "executing step..."      
             
 #       - name: step6
 #         type: Bash
