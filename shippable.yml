@@ -3,7 +3,9 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: vijay
-      path: vijayreddy1991/runtime     
+      path: vijayreddy1991/runtime 
+      
+      
 #   - name: git_test_100
 #     type: GitRepo
 #     configuration:
