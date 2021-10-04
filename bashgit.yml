@@ -1,96 +1,96 @@
 resources:
-  - name: S_Bash_0142_GitRepo
+  - name: S_Bash_0142_GitRepo1
     type: GitRepo
     configuration:
       gitProvider: vijay
       path: vijayreddy1991/runtime
 
 pipelines:
-  - name: pipelines_S_Bash_0142
+  - name: pipelines_S_Bash_0142_1
     steps:
-      - name: S_Bash_0142
+      - name: S_Bash_0142_1
         type: Bash
         configuration:
           inputResources:
-            - name: S_Bash_0142_GitRepo
+            - name: S_Bash_0142_GitRepo1
         execution:
           onExecute:
             - printenv
             - echo "executing step..."
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_lastAuthorEmail" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_lastAuthorEmail" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_gitProvider_token" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_gitProvider_token" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_isGitTag" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_isGitTag" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_commitUrl" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_commitUrl" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_shaData" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_shaData" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_gitProvider_id" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_gitProvider_id" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_integrationName" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_integrationName" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_operation" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_operation" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_gitRepoFullName" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_gitRepoFullName" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_gitProvider_name" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_gitProvider_name" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_gitProvider_url" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_gitProvider_url" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_gitRepoSourceDefaultBranch" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_gitRepoSourceDefaultBranch" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_isTrigger" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_isTrigger" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_resourceId" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_resourceId" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_gitProvider_masterName" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_gitProvider_masterName" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_commitSha" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_commitSha" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_isPullRequest" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_isPullRequest" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_path" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_path" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_isPrivateRepository" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_isPrivateRepository" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_isPrerelease" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_isPrerelease" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_gitRepoRepositorySshUrl" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_gitRepoRepositorySshUrl" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_isRelease" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_isRelease" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_committerLogin" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_committerLogin" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_integrationAlias" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_integrationAlias" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_branchName" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_branchName" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_resourcePath" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_resourcePath" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_compareUrl" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_compareUrl" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_repositoryProvider" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_repositoryProvider" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_sysPrivateDeployKey" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_sysPrivateDeployKey" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_sysPublicDeployKey" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_sysPublicDeployKey" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_lastAuthorLogin" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_lastAuthorLogin" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_beforeCommitSha" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_beforeCommitSha" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_gitRepoRepositoryHttpsUrl" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_gitRepoRepositoryHttpsUrl" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_isPullRequestClose" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_isPullRequestClose" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_gitRepoRepositoryUrl" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_gitRepoRepositoryUrl" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_masterName" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_masterName" ]
             - |
-              [ ! -z "$res_S_Bash_0142_GitRepo_commitMessage" ]
+              [ ! -z "$res_S_Bash_0142_GitRepo1_commitMessage" ]
             #- |
             #  [ ! -z "$res_S_Bash_0142_GitRepo_gitTagMessage" ]
             #- |
