@@ -21,8 +21,6 @@ pipelines:
             - echo "executing step..."
             - printenv  
             - free -m
-    
-
       - name: S_Bash2
         type: PowerShell
         configuration: 
